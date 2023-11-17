@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Makerdeel2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +25,9 @@ namespace MakerDeelEVOQUIZ
 
         private void btnTrueFalse_Click(object sender, EventArgs e)
         {
-            FormTrueFalse formTrueFalse = new FormTrueFalse();
-            formTrueFalse.ShowDialog();
-            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }
