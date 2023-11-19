@@ -12,18 +12,25 @@ namespace MakerDeelEVOQUIZ
 {
     public partial class FormVraagTest : Form
     {
-        private string antwoord1;
 
-        public string antwoord
+        public string Question
         {
-            get => antwoord1; internal set
+            get => question; internal set
             {
-                antwoord1 = value;
+                question = value;
+            }
+        }
+        public string Answer
+        {
+            get => answer; internal set
+            {
+                answer = value;
             }
         }
 
-        public string vraag { get; internal set; }
         string textvraag;
+        private string question;
+        private string answer;
 
         public FormVraagTest()
         {
@@ -32,29 +39,27 @@ namespace MakerDeelEVOQUIZ
 
         private void VraagTest_Load(object sender, EventArgs e)
         {
+            lblVraag_Click(sender, e);
             btnFalse.FlatStyle = FlatStyle.Flat;
             btnFalse.FlatAppearance.BorderSize = 0;
             btnTrue.FlatStyle = FlatStyle.Flat;
             btnTrue.FlatAppearance.BorderSize = 0;
-            textvraag = vraag;
-            lblVraag.Text = textvraag;
-
-            if (antwoord == "true")
-            {
-                btnFalse.BackColor = Color.Red;
-            }
-
-
+            
         }
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
-
+            lblVraag.Text = question;
         }
 
         private void btnFalse_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblVraag_Click(object sender, EventArgs e)
+        {
+            lblVraag.Text = question;
         }
     }
 }

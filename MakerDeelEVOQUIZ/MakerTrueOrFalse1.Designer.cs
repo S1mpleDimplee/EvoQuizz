@@ -1,6 +1,6 @@
 ﻿namespace Makerdeel2
 {
-    partial class Form1
+    partial class MakerTrueOrFalse1
     {
         /// <summary>
         /// Required designer variable.
@@ -36,20 +36,25 @@
             // 
             // tboxVraag
             // 
-            this.tboxVraag.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.tboxVraag.Location = new System.Drawing.Point(126, 51);
+            this.tboxVraag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tboxVraag.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
+            this.tboxVraag.Location = new System.Drawing.Point(61, 94);
+            this.tboxVraag.Margin = new System.Windows.Forms.Padding(2);
             this.tboxVraag.Name = "tboxVraag";
-            this.tboxVraag.Size = new System.Drawing.Size(513, 83);
+            this.tboxVraag.Size = new System.Drawing.Size(1366, 98);
             this.tboxVraag.TabIndex = 0;
             this.tboxVraag.TextChanged += new System.EventHandler(this.tboxVraag_TextChanged);
             // 
             // btnTrue
             // 
+            this.btnTrue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTrue.AutoSize = true;
             this.btnTrue.BackColor = System.Drawing.Color.Green;
             this.btnTrue.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnTrue.Location = new System.Drawing.Point(126, 190);
+            this.btnTrue.Location = new System.Drawing.Point(148, 370);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrue.Name = "btnTrue";
-            this.btnTrue.Size = new System.Drawing.Size(209, 189);
+            this.btnTrue.Size = new System.Drawing.Size(501, 236);
             this.btnTrue.TabIndex = 1;
             this.btnTrue.Text = "TRUE";
             this.btnTrue.UseVisualStyleBackColor = false;
@@ -57,11 +62,14 @@
             // 
             // btnFalse
             // 
+            this.btnFalse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFalse.AutoSize = true;
             this.btnFalse.BackColor = System.Drawing.Color.DarkRed;
             this.btnFalse.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnFalse.Location = new System.Drawing.Point(430, 190);
+            this.btnFalse.Location = new System.Drawing.Point(858, 370);
+            this.btnFalse.Margin = new System.Windows.Forms.Padding(2);
             this.btnFalse.Name = "btnFalse";
-            this.btnFalse.Size = new System.Drawing.Size(209, 189);
+            this.btnFalse.Size = new System.Drawing.Size(501, 236);
             this.btnFalse.TabIndex = 3;
             this.btnFalse.Text = "FALSE";
             this.btnFalse.UseVisualStyleBackColor = false;
@@ -69,10 +77,13 @@
             // 
             // btnVolgende
             // 
+            this.btnVolgende.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVolgende.AutoSize = true;
             this.btnVolgende.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F);
-            this.btnVolgende.Location = new System.Drawing.Point(638, 394);
+            this.btnVolgende.Location = new System.Drawing.Point(1020, 659);
+            this.btnVolgende.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolgende.Name = "btnVolgende";
-            this.btnVolgende.Size = new System.Drawing.Size(150, 44);
+            this.btnVolgende.Size = new System.Drawing.Size(339, 104);
             this.btnVolgende.TabIndex = 4;
             this.btnVolgende.Text = "Volgende";
             this.btnVolgende.UseVisualStyleBackColor = true;
@@ -80,16 +91,19 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1463, 821);
             this.Controls.Add(this.btnVolgende);
             this.Controls.Add(this.btnFalse);
             this.Controls.Add(this.btnTrue);
             this.Controls.Add(this.tboxVraag);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "True Or False";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
