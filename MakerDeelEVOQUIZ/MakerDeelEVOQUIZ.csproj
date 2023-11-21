@@ -52,12 +52,6 @@
     <Compile Include="MakerTrueOrFalse1.Designer.cs">
       <DependentUpon>MakerTrueOrFalse1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTrueFalse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTrueFalse.Designer.cs">
-      <DependentUpon>FormTrueFalse.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormVraagMaker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     </Compile>
     <EmbeddedResource Include="MakerTrueOrFalse1.resx">
       <DependentUpon>MakerTrueOrFalse1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTrueFalse.resx">
-      <DependentUpon>FormTrueFalse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVraagMaker.resx">
       <DependentUpon>FormVraagMaker.cs</DependentUpon>
