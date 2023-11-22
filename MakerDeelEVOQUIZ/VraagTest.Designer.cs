@@ -31,12 +31,12 @@
             this.lblVraag = new System.Windows.Forms.Label();
             this.btnTrue = new System.Windows.Forms.Button();
             this.btnFalse = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.prbTijd = new System.Windows.Forms.ProgressBar();
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVraag
@@ -48,6 +48,7 @@
             this.lblVraag.Size = new System.Drawing.Size(267, 76);
             this.lblVraag.TabIndex = 0;
             this.lblVraag.Text = "Vraag...";
+            this.lblVraag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTrue
             // 
@@ -79,14 +80,14 @@
             this.btnFalse.Visible = false;
             this.btnFalse.Click += new System.EventHandler(this.btnFalse_Click);
             // 
-            // pictureBox1
+            // bar
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBox1.Location = new System.Drawing.Point(-28, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2033, 138);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.bar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.bar.Location = new System.Drawing.Point(-201, 2);
+            this.bar.Name = "bar";
+            this.bar.Size = new System.Drawing.Size(2564, 138);
+            this.bar.TabIndex = 7;
+            this.bar.TabStop = false;
             // 
             // label1
             // 
@@ -102,7 +103,7 @@
             // 
             // prbTijd
             // 
-            this.prbTijd.Location = new System.Drawing.Point(48, 573);
+            this.prbTijd.Location = new System.Drawing.Point(58, 573);
             this.prbTijd.Name = "prbTijd";
             this.prbTijd.Size = new System.Drawing.Size(1819, 62);
             this.prbTijd.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -144,7 +145,7 @@
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.prbTijd);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bar);
             this.Controls.Add(this.btnFalse);
             this.Controls.Add(this.btnTrue);
             this.Controls.Add(this.lblVraag);
@@ -153,7 +154,7 @@
             this.Text = "VraagTest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VraagTest_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,7 +165,7 @@
         private System.Windows.Forms.Label lblVraag;
         private System.Windows.Forms.Button btnTrue;
         private System.Windows.Forms.Button btnFalse;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar prbTijd;
         private System.Windows.Forms.Label lblTimer;

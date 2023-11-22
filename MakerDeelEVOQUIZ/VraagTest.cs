@@ -216,7 +216,7 @@ namespace MakerDeelEVOQUIZ
             }
         }
 
-        private void punten20()
+        private async void punten20()
         {
             timer3--;
             lblTimer.Text = "Time: " + timer3.ToString();
@@ -226,6 +226,11 @@ namespace MakerDeelEVOQUIZ
                 lblScore.Visible = true;
                 finalScore += totalScore;
                 loop = 0;
+                await Task.Delay(5000);
+                Formleaderboard formleaderboard = new Formleaderboard();
+                formleaderboard.finalScore = finalScore;
+                this.Hide();
+                formleaderboard.Show();
             }
         }
     }
