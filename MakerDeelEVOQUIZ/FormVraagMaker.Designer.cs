@@ -31,7 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVraagOptieKeuze));
             this.btnMeerKeuzeVraag = new System.Windows.Forms.Button();
             this.btnTrueFalse = new System.Windows.Forms.Button();
-            this.btnTerug = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.PictureBox();
+            this.bar = new System.Windows.Forms.PictureBox();
+            this.pboxLogo = new System.Windows.Forms.PictureBox();
+            this.lblQuiz = new System.Windows.Forms.Label();
+            this.lblMode = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMeerKeuzeVraag
@@ -41,10 +48,9 @@
             this.btnMeerKeuzeVraag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMeerKeuzeVraag.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMeerKeuzeVraag.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.btnMeerKeuzeVraag.Location = new System.Drawing.Point(3, 316);
-            this.btnMeerKeuzeVraag.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMeerKeuzeVraag.Location = new System.Drawing.Point(233, 366);
             this.btnMeerKeuzeVraag.Name = "btnMeerKeuzeVraag";
-            this.btnMeerKeuzeVraag.Size = new System.Drawing.Size(727, 320);
+            this.btnMeerKeuzeVraag.Size = new System.Drawing.Size(545, 260);
             this.btnMeerKeuzeVraag.TabIndex = 0;
             this.btnMeerKeuzeVraag.Text = "Multiple Choice";
             this.btnMeerKeuzeVraag.UseVisualStyleBackColor = true;
@@ -57,42 +63,93 @@
             this.btnTrueFalse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTrueFalse.Font = new System.Drawing.Font("Cooper Black", 30.25F);
             this.btnTrueFalse.ForeColor = System.Drawing.Color.White;
-            this.btnTrueFalse.Location = new System.Drawing.Point(1211, 316);
-            this.btnTrueFalse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTrueFalse.Location = new System.Drawing.Point(1139, 366);
             this.btnTrueFalse.Name = "btnTrueFalse";
-            this.btnTrueFalse.Size = new System.Drawing.Size(727, 320);
+            this.btnTrueFalse.Size = new System.Drawing.Size(545, 260);
             this.btnTrueFalse.TabIndex = 1;
             this.btnTrueFalse.Text = "True             OR          False";
             this.btnTrueFalse.UseVisualStyleBackColor = true;
             this.btnTrueFalse.Click += new System.EventHandler(this.btnTrueFalse_Click);
             // 
-            // btnTerug
+            // btnBack
             // 
-            this.btnTerug.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTerug.AutoSize = true;
-            this.btnTerug.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.btnTerug.Location = new System.Drawing.Point(3, 65);
-            this.btnTerug.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTerug.Name = "btnTerug";
-            this.btnTerug.Size = new System.Drawing.Size(369, 97);
-            this.btnTerug.TabIndex = 2;
-            this.btnTerug.Text = "<- Terug";
-            this.btnTerug.UseVisualStyleBackColor = true;
+            this.btnBack.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(2, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(165, 141);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 8;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // bar
+            // 
+            this.bar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.bar.Location = new System.Drawing.Point(-180, 0);
+            this.bar.Margin = new System.Windows.Forms.Padding(2);
+            this.bar.Name = "bar";
+            this.bar.Size = new System.Drawing.Size(2094, 143);
+            this.bar.TabIndex = 10;
+            this.bar.TabStop = false;
+            // 
+            // pboxLogo
+            // 
+            this.pboxLogo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pboxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pboxLogo.Image")));
+            this.pboxLogo.Location = new System.Drawing.Point(852, 2);
+            this.pboxLogo.Name = "pboxLogo";
+            this.pboxLogo.Size = new System.Drawing.Size(164, 141);
+            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxLogo.TabIndex = 13;
+            this.pboxLogo.TabStop = false;
+            // 
+            // lblQuiz
+            // 
+            this.lblQuiz.AutoSize = true;
+            this.lblQuiz.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblQuiz.Font = new System.Drawing.Font("Elephant", 45.8F, System.Drawing.FontStyle.Bold);
+            this.lblQuiz.ForeColor = System.Drawing.Color.White;
+            this.lblQuiz.Location = new System.Drawing.Point(430, 32);
+            this.lblQuiz.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQuiz.Name = "lblQuiz";
+            this.lblQuiz.Size = new System.Drawing.Size(417, 80);
+            this.lblQuiz.TabIndex = 14;
+            this.lblQuiz.Text = "Quiz Maker";
+            // 
+            // lblMode
+            // 
+            this.lblMode.AutoSize = true;
+            this.lblMode.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblMode.Font = new System.Drawing.Font("Elephant", 45.8F, System.Drawing.FontStyle.Bold);
+            this.lblMode.ForeColor = System.Drawing.Color.White;
+            this.lblMode.Location = new System.Drawing.Point(1021, 32);
+            this.lblMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMode.Name = "lblMode";
+            this.lblMode.Size = new System.Drawing.Size(211, 80);
+            this.lblMode.TabIndex = 15;
+            this.lblMode.Text = "Mode";
             // 
             // FormVraagOptieKeuze
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1924, 1013);
-            this.Controls.Add(this.btnTerug);
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lblMode);
+            this.Controls.Add(this.lblQuiz);
+            this.Controls.Add(this.pboxLogo);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnTrueFalse);
             this.Controls.Add(this.btnMeerKeuzeVraag);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.bar);
             this.Name = "FormVraagOptieKeuze";
             this.Text = "FormVraagMaker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +159,10 @@
 
         private System.Windows.Forms.Button btnMeerKeuzeVraag;
         private System.Windows.Forms.Button btnTrueFalse;
-        private System.Windows.Forms.Button btnTerug;
+        private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.PictureBox bar;
+        private System.Windows.Forms.PictureBox pboxLogo;
+        private System.Windows.Forms.Label lblQuiz;
+        private System.Windows.Forms.Label lblMode;
     }
 }

@@ -25,29 +25,34 @@ namespace Makerdeel2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-            TopMost = true;
-
+            //Dit maakt de button borders ontzichtbar
             btnFalse.FlatStyle = FlatStyle.Flat;
             btnFalse.FlatAppearance.BorderSize = 0;
             btnTrue.FlatStyle = FlatStyle.Flat;
             btnTrue.FlatAppearance.BorderSize = 0;
-            btnVolgende.FlatAppearance.BorderSize = 0;
+
+            this.btnNext.BackColor = Color.Transparent;
 
         }
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
-            Answer = true;
-            CheckAnswer = true;
+            Answer = true; //Geeft het antwoord de waarde true
+
+            CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
+
+            //Maakt de buttons andere kleur
             btnTrue.BackColor = Color.Lime;
             btnFalse.BackColor = Color.DarkRed;
         }
 
         private void btnFalse_Click(object sender, EventArgs e)
         {
-            Answer = false;
-            CheckAnswer = true;
+            Answer = false; //Geeft het antwoord de waarde False
+
+            CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
+
+            //Maakt de buttons andere kleur
             btnFalse.BackColor = Color.Red;
             btnTrue.BackColor = Color.Green;
         }
@@ -55,9 +60,10 @@ namespace Makerdeel2
 
         private void tboxVraag_TextChanged(object sender, EventArgs e)
         {
-            string tbox;
+            string tbox; //Maakt snel een variable aan om te checken
             tbox = tboxVraag.Text;
-            if (tbox == string.Empty)
+
+            if (tbox == string.Empty) //Als de textbox leeg is dan doet hij niks en kan je niet verder
             {
                 CheckQuestion = false;
             }
@@ -67,25 +73,32 @@ namespace Makerdeel2
             }
         }
 
-        private async void btnVolgende_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            if (CheckAnswer == true && CheckQuestion == true)
+            FormVraagOptieKeuze formVraagOptieKeuze = new FormVraagOptieKeuze();
+            formVraagOptieKeuze.Show();
+            this.Close();
+        }
+
+        private async void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (CheckAnswer == true && CheckQuestion == true) //Kijkt of er een vraag is ingevuld en true of false is ingevuld
             {
 
-                FormVraagTest formVraagTest = new FormVraagTest();
                 Question = tboxVraag.Text;
                 this.Hide();
+                FormVraagTest formVraagTest = new FormVraagTest();
                 formVraagTest.Show();
                 formVraagTest.Question = Question;
                 formVraagTest.Answer = Answer;
             }
-            if (CheckAnswer == false)
+            if (CheckAnswer == false) //Als er geen true of false is ingevuld dan vermeld die dat met de label lblNoaswer
             {
                 lblNoanswer.Visible = true;
                 await Task.Delay(4000);
                 lblNoanswer.Visible = false;
             }
-            if (CheckQuestion == false) 
+            if (CheckQuestion == false) //Als er geen vraag is ingevuld dan vermeld die dat met de label lblNoquestion
             {
                 lblNoquestion.Visible = true;
                 await Task.Delay(4000);

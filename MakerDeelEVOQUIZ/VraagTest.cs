@@ -49,13 +49,18 @@ namespace MakerDeelEVOQUIZ
 
         private async void VraagTest_Load(object sender, EventArgs e)
         {
+            //Maakt de button border onzichtbaar
             btnFalse.FlatStyle = FlatStyle.Flat;
             btnFalse.FlatAppearance.BorderSize = 0;
             btnTrue.FlatStyle = FlatStyle.Flat;
             btnTrue.FlatAppearance.BorderSize = 0;
+
+            //Hier wacht hij 1 miliseconden en geeft daarna lblVraag de waarde van de variable in
+
             await Task.Delay(1);
             lblVraag.Text = question;
-            while (true)
+
+            while (true) //Start de loop van de timer en maakt de buttons zichtbaar
             {
                 await Task.Delay(40);
                 prbTijd.Value++;
@@ -64,7 +69,7 @@ namespace MakerDeelEVOQUIZ
                     btnFalse.Visible = true;
                     btnTrue.Visible = true;
                     prbTijd.Visible = false;
-                    startcount();
+                    startcount(); //Start de functie
                     break;
                 }
             }
@@ -75,24 +80,36 @@ namespace MakerDeelEVOQUIZ
         {
             AnswerUser = true;
 
-            if (AnswerUser == answer)
+            if (AnswerUser == answer) //Kijkt of de vraag goed is (Als de Vraag true is en de antwoord ook true bijvoorbeeld
             {
+                //ForeColor = TextKleur
+                //BackColor = Button achtergrond kleur
                 BackColor = Color.Lime;
-                LoopStop = true;
                 lblScore.ForeColor = Color.Lime;
+                btnTrue.BackColor = Color.LightGreen;
+
+                //Stopts de Loop omdat hij true gaat
+                LoopStop = true;
+
+                //Disabled de buttons
                 btnFalse.Enabled = false;
                 btnTrue.Enabled = false;
-                btnTrue.BackColor = Color.LightGreen;
             }
             else
             {
                 btnTrue.BackColor = Color.LightGreen;
-                totalScore = 0;
-                lblScore.Text = "Score: +" + totalScore.ToString();
-                lblScore.Visible = true;
-                BackColor = Color.Red;
-                LoopStop = true;
                 lblScore.ForeColor = Color.Red;
+                BackColor = Color.Red;
+
+                totalScore = 0; //Zet de score op nul omdat de vraag fout is
+
+                lblScore.Text = "Score: +" + totalScore.ToString(); //Zet de totale score in de label
+                lblScore.Visible = true;
+
+                //Stopts de Loop omdat hij true gaat
+                LoopStop = true;
+                
+                //Disabled the Buttons
                 btnFalse.Enabled = false;
                 btnTrue.Enabled = false;
             }
@@ -105,8 +122,10 @@ namespace MakerDeelEVOQUIZ
                 {
                     btnFalse.BackColor = Color.IndianRed;
                     BackColor = Color.Lime;
-                    LoopStop = true;
                     lblScore.ForeColor = Color.Lime;
+
+                    LoopStop = true;
+
                     btnFalse.Enabled = false;
                     btnTrue.Enabled = false;
 
@@ -114,12 +133,15 @@ namespace MakerDeelEVOQUIZ
                 else
                 {
                     btnFalse.BackColor = Color.IndianRed;
+                    lblScore.ForeColor = Color.Red;
+                    BackColor = Color.Red;
+
                     totalScore = 0;
                     lblScore.Text = "Score: +" + totalScore.ToString();
                     lblScore.Visible = true;
-                    BackColor = Color.Red;
+
                     LoopStop = true;
-                    lblScore.ForeColor = Color.Red;
+
                     btnFalse.Enabled = false;
                     btnTrue.Enabled = false;
 
@@ -130,18 +152,22 @@ namespace MakerDeelEVOQUIZ
 
         private async void startcount()
         {
-            while (totalScore > 500 && loop == 1)
+            while (totalScore > 500 && loop == 1) //Kijkt of the totalScore boven de 500 is en Loop 1 is
             {
-                switch (timerSpeed)
+                switch (timerSpeed) //Timer speed switch case
                 {
                     case 20:
-                        totalScore--;
-                        await Task.Delay(33);
-                        lblTimer.Text = "Time: " + timer3.ToString();
+
+                        totalScore--; //Laat de score steeds 1 afnemen
+
+                        await Task.Delay(33); //Wacht 33 Miliseconden
+
+                        lblTimer.Text = "Time: " + timer3.ToString(); //Laat de Label aftellen door timer3
+
                         switch (totalScore)
                         {
                             case 1000:
-                                punten20();
+                                punten20(); //Dit triggered steeds de Function punten20
                                 break;
                             case 975:
                                 punten20();
@@ -202,11 +228,17 @@ namespace MakerDeelEVOQUIZ
                                 break;
                             case 500:
                                 punten20();
+
+                                //Veranderd de kleur naar rood omdat je telaat bent (20 sec) en dan telt het als fout
                                 BackColor = Color.Red;
                                 btnFalse.BackColor = Color.Red;
+
+
                                 totalScore = 0;
                                 lblScore.Text = "Score: +" + totalScore.ToString();
                                 lblScore.Visible = true;
+
+                                //disabled de buttons
                                 btnFalse.Enabled = false;
                                 btnTrue.Enabled = false;
                                 break;
@@ -219,14 +251,20 @@ namespace MakerDeelEVOQUIZ
         private async void punten20()
         {
             timer3--;
+
             lblTimer.Text = "Time: " + timer3.ToString();
+
             if (LoopStop == true)
             {
+                //Laat hier de score zien
                 lblScore.Text = "Score: +" + totalScore.ToString();
                 lblScore.Visible = true;
+
                 finalScore += totalScore;
-                loop = 0;
+                loop = 0; //Zet de loop op 0 zodat hij niet verder gaat
+
                 await Task.Delay(5000);
+
                 Formleaderboard formleaderboard = new Formleaderboard();
                 formleaderboard.finalScore = finalScore;
                 this.Hide();
