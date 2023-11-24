@@ -104,7 +104,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Silver;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 507);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 521);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(1202, 140);
             this.pictureBox4.TabIndex = 6;
@@ -138,7 +138,7 @@
             this.lblPlayer2.BackColor = System.Drawing.Color.Silver;
             this.lblPlayer2.Font = new System.Drawing.Font("Cooper Black", 50F, System.Drawing.FontStyle.Italic);
             this.lblPlayer2.ForeColor = System.Drawing.Color.White;
-            this.lblPlayer2.Location = new System.Drawing.Point(99, 527);
+            this.lblPlayer2.Location = new System.Drawing.Point(99, 533);
             this.lblPlayer2.Name = "lblPlayer2";
             this.lblPlayer2.Size = new System.Drawing.Size(309, 96);
             this.lblPlayer2.TabIndex = 9;
@@ -162,7 +162,7 @@
             this.lblPoints2.BackColor = System.Drawing.Color.Silver;
             this.lblPoints2.Font = new System.Drawing.Font("Cooper Black", 50F, System.Drawing.FontStyle.Italic);
             this.lblPoints2.ForeColor = System.Drawing.Color.White;
-            this.lblPoints2.Location = new System.Drawing.Point(751, 527);
+            this.lblPoints2.Location = new System.Drawing.Point(751, 533);
             this.lblPoints2.Name = "lblPoints2";
             this.lblPoints2.Size = new System.Drawing.Size(90, 96);
             this.lblPoints2.TabIndex = 11;

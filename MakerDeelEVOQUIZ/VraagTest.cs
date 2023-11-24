@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MakerDeelEVOQUIZ
 {
@@ -33,7 +34,9 @@ namespace MakerDeelEVOQUIZ
 
         int timerSpeed = 20;
         int totalScore = 1000;
+        int timer2 = 10;
         int timer3 = 20;
+        int timer4 = 30;
         int finalScore = 0;
         int loop = 1;
 
@@ -67,7 +70,6 @@ namespace MakerDeelEVOQUIZ
             while (true) //Start de loop van de timer en maakt de buttons zichtbaar
             {
                 await Task.Delay(40);
-                prbTijd.ForeColor = Color.Purple;
                 prbTijd.Value++;
                 if (prbTijd.Value == 100)
                 {
@@ -108,10 +110,8 @@ namespace MakerDeelEVOQUIZ
             if (AnswerUser == answer) //Kijkt of de vraag goed is (Als de Vraag true is en de antwoord ook true bijvoorbeeld
             {
                 //ForeColor = TextKleur
-                //BackColor = Button achtergrond kleur
-                BackColor = Color.Cyan;
                 lblScore.ForeColor = Color.Cyan;
-                btnTrue.BackColor = Color.LightGreen;
+                btnTrue.BackColor = Color.Cyan;
 
                 //Stopts de Loop omdat hij true gaat
                 LoopStop = true;
@@ -124,7 +124,6 @@ namespace MakerDeelEVOQUIZ
             {
                 btnTrue.BackColor = Color.Cyan;
                 lblScore.ForeColor = Color.Gray;
-                BackColor = Color.Cyan;
 
                 totalScore = 0; //Zet de score op nul omdat de vraag fout is
 
@@ -145,8 +144,7 @@ namespace MakerDeelEVOQUIZ
                 AnswerUser = false;
                 if (AnswerUser == answer)
                 {
-                    btnFalse.BackColor = Color.IndianRed;
-                    BackColor = Color.OrangeRed;
+                    btnFalse.BackColor = Color.Goldenrod;
                     lblScore.ForeColor = Color.Cyan;
 
                     LoopStop = true;
@@ -157,9 +155,8 @@ namespace MakerDeelEVOQUIZ
                 }
                 else
                 {
-                    btnFalse.BackColor = Color.IndianRed;
+                    btnFalse.BackColor = Color.Goldenrod;
                     lblScore.ForeColor = Color.Gray;
-                    BackColor = Color.OrangeRed;
 
                     totalScore = 0;
                     lblScore.Text = "Score: +" + totalScore.ToString();
@@ -181,6 +178,48 @@ namespace MakerDeelEVOQUIZ
             {
                 switch (timerSpeed) //Timer speed switch case
                 {
+                    case 10:
+                        totalScore--;
+                        await Task.Delay(15);
+                        lblTimer.Text = "Time: " + timer2.ToString();
+                        switch (totalScore)
+                        {
+                            case 1000:
+                                punten10();
+                                break;
+                            case 950:
+                                punten10();
+                                break;
+                            case 900:
+                                punten10();
+                                break;
+                            case 850:
+                                punten10();
+                                break;
+                            case 800:
+                                punten10();
+                                break;
+                            case 750:
+                                punten10();
+                                break;
+                            case 700:
+                                punten10();
+                                break;
+                            case 650:
+                                punten10();
+                                break;
+                            case 600:
+                                punten10();
+                                break;
+                            case 550:
+                                punten10();
+                                break;
+                            case 500:
+                                punten10();
+                                break;
+                        }
+
+                        break;
                     case 20:
 
                         totalScore--; //Laat de score steeds 1 afnemen
@@ -269,10 +308,133 @@ namespace MakerDeelEVOQUIZ
                                 break;
                         }
                         break;
+                    case 30:
+                        totalScore--;
+                        await Task.Delay(55);
+                        lblTimer.Text = "Time: " + timer4.ToString();
+                        switch (totalScore)
+                        {
+                            case 1000:
+                                punten30();
+                                break;
+                            case 983:
+                                punten30();
+                                break;
+                            case 967:
+                                punten30();
+                                break;
+                            case 951:
+                                punten30();
+                                break;
+                            case 934:
+                                punten30();
+                                break;
+                            case 918:
+                                punten30();
+                                break;
+                            case 902:
+                                punten30();
+                                break;
+                            case 885:
+                                punten30();
+                                break;
+                            case 869:
+                                punten30();
+                                break;
+                            case 852:
+                                punten30();
+                                break;
+                            case 836:
+                                punten30();
+                                break;
+                            case 820:
+                                punten30();
+                                break;
+                            case 804:
+                                punten30();
+                                break;
+                            case 787:
+                                punten30();
+                                break;
+                            case 771:
+                                punten30();
+                                break;
+                            case 755:
+                                punten30();
+                                break;
+                            case 738:
+                                punten30();
+                                break;
+                            case 722:
+                                punten30();
+                                break;
+                            case 706:
+                                punten30();
+                                break;
+                            case 689:
+                                punten30();
+                                break;
+                            case 673:
+                                punten30();
+                                break;
+                            case 657:
+                                punten30();
+                                break;
+                            case 640:
+                                punten30();
+                                break;
+                            case 624:
+                                punten30();
+                                break;
+                            case 608:
+                                punten30();
+                                break;
+                            case 591:
+                                punten30();
+                                break;
+                            case 575:
+                                punten30();
+                                break;
+                            case 559:
+                                punten30();
+                                break;
+                            case 542:
+                                punten30();
+                                break;
+                            case 526:
+                                punten30();
+                                break;
+                            case 510:
+                                punten30();
+                                break;
+                        }
+                        break;
                 }
             }
         }
 
+        private async void punten10()
+        {
+            timer2--;
+
+            lblTimer.Text = "Time: " + timer2.ToString();
+
+            if (LoopStop == true)
+            {
+                lblScore.Text = "Score: +" + totalScore.ToString();
+                lblScore.Visible = true;
+
+                finalScore += totalScore;
+                loop = 0; //Zet de loop op 0 zodat hij niet verder gaat
+
+                await Task.Delay(5000);
+
+                Formleaderboard formleaderboard = new Formleaderboard();
+                formleaderboard.finalScore = finalScore;
+                this.Hide();
+                formleaderboard.Show();
+            }
+        }
         private async void punten20()
         {
             timer3--;
@@ -297,5 +459,28 @@ namespace MakerDeelEVOQUIZ
             }
         }
 
+        private async void punten30()
+        {
+            timer4--;
+
+            lblTimer.Text = "Time: " + timer4.ToString();
+
+            if (LoopStop == true)
+            {
+                //Laat hier de score zien
+                lblScore.Text = "Score: +" + totalScore.ToString();
+                lblScore.Visible = true;
+
+                finalScore += totalScore;
+                loop = 0; //Zet de loop op 0 zodat hij niet verder gaat
+
+                await Task.Delay(5000);
+
+                Formleaderboard formleaderboard = new Formleaderboard();
+                formleaderboard.finalScore = finalScore;
+                this.Hide();
+                formleaderboard.Show();
+            }
+        }
     }
 }

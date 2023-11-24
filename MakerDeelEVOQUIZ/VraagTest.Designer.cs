@@ -115,6 +115,7 @@
             // prbTijd
             // 
             this.prbTijd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.prbTijd.ForeColor = System.Drawing.Color.Purple;
             this.prbTijd.Location = new System.Drawing.Point(42, 666);
             this.prbTijd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prbTijd.Name = "prbTijd";
