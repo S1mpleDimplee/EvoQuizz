@@ -42,6 +42,8 @@ namespace MakerDeelEVOQUIZ
         bool AnswerUser;
         private bool answer;
 
+        int thatis;
+
         public FormVraagTest()
         {
             InitializeComponent();
@@ -51,9 +53,11 @@ namespace MakerDeelEVOQUIZ
         {
             //Maakt de button border onzichtbaar
             btnFalse.FlatStyle = FlatStyle.Flat;
-            btnFalse.FlatAppearance.BorderSize = 0;
+            btnFalse.FlatAppearance.BorderSize = 8;
+            btnFalse.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
             btnTrue.FlatStyle = FlatStyle.Flat;
-            btnTrue.FlatAppearance.BorderSize = 0;
+            btnTrue.FlatAppearance.BorderSize = 8;
+            btnTrue.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
 
             //Hier wacht hij 1 miliseconden en geeft daarna lblVraag de waarde van de variable in
 
@@ -63,9 +67,11 @@ namespace MakerDeelEVOQUIZ
             while (true) //Start de loop van de timer en maakt de buttons zichtbaar
             {
                 await Task.Delay(40);
+                prbTijd.ForeColor = Color.Purple;
                 prbTijd.Value++;
                 if (prbTijd.Value == 100)
                 {
+                    await Task.Delay(680);
                     btnFalse.Visible = true;
                     btnTrue.Visible = true;
                     prbTijd.Visible = false;
@@ -76,16 +82,35 @@ namespace MakerDeelEVOQUIZ
 
         }
 
-        private void btnTrue_Click(object sender, EventArgs e)
+        private async void btnTrue_Click(object sender, EventArgs e)
         {
             AnswerUser = true;
+
+            lblVraag.Visible = false;
+            lblThatis.Visible = true;
+            while (true)
+            {
+                lblThatis.Text = "That is.";
+                await Task.Delay(300);
+                lblThatis.Text = "That is..";
+                await Task.Delay(300);
+                lblThatis.Text = "That is...";
+                await Task.Delay(300);
+                thatis ++;
+
+                if (thatis == 2)
+                {
+                    break;
+                }
+                break;
+            }
 
             if (AnswerUser == answer) //Kijkt of de vraag goed is (Als de Vraag true is en de antwoord ook true bijvoorbeeld
             {
                 //ForeColor = TextKleur
                 //BackColor = Button achtergrond kleur
-                BackColor = Color.Lime;
-                lblScore.ForeColor = Color.Lime;
+                BackColor = Color.Cyan;
+                lblScore.ForeColor = Color.Cyan;
                 btnTrue.BackColor = Color.LightGreen;
 
                 //Stopts de Loop omdat hij true gaat
@@ -97,9 +122,9 @@ namespace MakerDeelEVOQUIZ
             }
             else
             {
-                btnTrue.BackColor = Color.LightGreen;
-                lblScore.ForeColor = Color.Red;
-                BackColor = Color.Red;
+                btnTrue.BackColor = Color.Cyan;
+                lblScore.ForeColor = Color.Gray;
+                BackColor = Color.Cyan;
 
                 totalScore = 0; //Zet de score op nul omdat de vraag fout is
 
@@ -121,8 +146,8 @@ namespace MakerDeelEVOQUIZ
                 if (AnswerUser == answer)
                 {
                     btnFalse.BackColor = Color.IndianRed;
-                    BackColor = Color.Lime;
-                    lblScore.ForeColor = Color.Lime;
+                    BackColor = Color.OrangeRed;
+                    lblScore.ForeColor = Color.Cyan;
 
                     LoopStop = true;
 
@@ -133,8 +158,8 @@ namespace MakerDeelEVOQUIZ
                 else
                 {
                     btnFalse.BackColor = Color.IndianRed;
-                    lblScore.ForeColor = Color.Red;
-                    BackColor = Color.Red;
+                    lblScore.ForeColor = Color.Gray;
+                    BackColor = Color.OrangeRed;
 
                     totalScore = 0;
                     lblScore.Text = "Score: +" + totalScore.ToString();
@@ -271,5 +296,6 @@ namespace MakerDeelEVOQUIZ
                 formleaderboard.Show();
             }
         }
+
     }
 }

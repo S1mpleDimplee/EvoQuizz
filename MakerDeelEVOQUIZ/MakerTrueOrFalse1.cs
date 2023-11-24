@@ -27,12 +27,11 @@ namespace Makerdeel2
         {
             //Dit maakt de button borders ontzichtbar
             btnFalse.FlatStyle = FlatStyle.Flat;
-            btnFalse.FlatAppearance.BorderSize = 0;
+            btnFalse.FlatAppearance.BorderSize = 8;
+            btnFalse.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
             btnTrue.FlatStyle = FlatStyle.Flat;
-            btnTrue.FlatAppearance.BorderSize = 0;
-
-            this.btnNext.BackColor = Color.Transparent;
-
+            btnTrue.FlatAppearance.BorderSize = 8;
+            btnTrue.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
         }
 
         private void btnTrue_Click(object sender, EventArgs e)
@@ -42,8 +41,8 @@ namespace Makerdeel2
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
-            btnTrue.BackColor = Color.Lime;
-            btnFalse.BackColor = Color.DarkRed;
+            btnTrue.BackColor = Color.Aqua;
+            btnFalse.BackColor = Color.Silver;
         }
 
         private void btnFalse_Click(object sender, EventArgs e)
@@ -53,8 +52,8 @@ namespace Makerdeel2
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
-            btnFalse.BackColor = Color.Red;
-            btnTrue.BackColor = Color.Green;
+            btnFalse.BackColor = Color.Gray;
+            btnTrue.BackColor = Color.MediumTurquoise;
         }
 
 
