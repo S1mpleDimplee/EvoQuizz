@@ -136,7 +136,7 @@
             this.lblNoquestion.BackColor = System.Drawing.Color.Transparent;
             this.lblNoquestion.Font = new System.Drawing.Font("ROG Fonts", 20F);
             this.lblNoquestion.ForeColor = System.Drawing.Color.Orange;
-            this.lblNoquestion.Location = new System.Drawing.Point(583, 886);
+            this.lblNoquestion.Location = new System.Drawing.Point(557, 888);
             this.lblNoquestion.Name = "lblNoquestion";
             this.lblNoquestion.Size = new System.Drawing.Size(834, 41);
             this.lblNoquestion.TabIndex = 6;
@@ -161,7 +161,7 @@
             this.lblNoanswer.BackColor = System.Drawing.Color.Transparent;
             this.lblNoanswer.Font = new System.Drawing.Font("ROG Fonts", 20F);
             this.lblNoanswer.ForeColor = System.Drawing.Color.Orange;
-            this.lblNoanswer.Location = new System.Drawing.Point(583, 886);
+            this.lblNoanswer.Location = new System.Drawing.Point(557, 888);
             this.lblNoanswer.Name = "lblNoanswer";
             this.lblNoanswer.Size = new System.Drawing.Size(793, 41);
             this.lblNoanswer.TabIndex = 5;
@@ -234,6 +234,7 @@
             this.Controls.Add(this.tboxVraag);
             this.Controls.Add(this.bar);
             this.Controls.Add(this.pboxBackground);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MakerTrueOrFalse1";
             this.Text = "a";

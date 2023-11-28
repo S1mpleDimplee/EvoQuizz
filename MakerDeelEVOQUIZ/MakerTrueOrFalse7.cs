@@ -1,5 +1,4 @@
-﻿using Makerdeel2;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MakerDeelEVOQUIZ
 {
-    public partial class MakerTrueOrFalse2 : Form
+    public partial class MakerTrueOrFalse7 : Form
     {
-        public MakerTrueOrFalse2()
+        public MakerTrueOrFalse7()
         {
             InitializeComponent();
         }
@@ -22,7 +21,8 @@ namespace MakerDeelEVOQUIZ
         bool Answer;
         bool CheckAnswer;
         bool CheckQuestion;
-        private void MakerTrueOrFalse2_Load(object sender, EventArgs e)
+
+        private void MakerTrueOrFalse7_Load(object sender, EventArgs e)
         {
             //Dit maakt de button borders ontzichtbar
             btnFalse.FlatStyle = FlatStyle.Flat;
@@ -37,6 +37,7 @@ namespace MakerDeelEVOQUIZ
         private void btnTrue_Click(object sender, EventArgs e)
         {
             Answer = true; //Geeft het antwoord de waarde true
+
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
@@ -47,6 +48,7 @@ namespace MakerDeelEVOQUIZ
         private void btnFalse_Click(object sender, EventArgs e)
         {
             Answer = false; //Geeft het antwoord de waarde False
+
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
@@ -55,7 +57,7 @@ namespace MakerDeelEVOQUIZ
         }
 
 
-        private void tboxVraag_TextChanged(object sender, EventArgs e)
+        private void tboxVraag_TextChanged_1(object sender, EventArgs e)
         {
             string tbox; //Maakt snel een variable aan om te checken
             tbox = tboxVraag.Text;
@@ -72,8 +74,8 @@ namespace MakerDeelEVOQUIZ
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MakerTrueOrFalse1 MakerTrueOrFalse1 = new MakerTrueOrFalse1();
-            MakerTrueOrFalse1.Show();
+            MakerTrueOrFalse6 MakerTrueOrFalse6 = new MakerTrueOrFalse6();
+            MakerTrueOrFalse6.Show();
             this.Close();
         }
 
@@ -82,18 +84,18 @@ namespace MakerDeelEVOQUIZ
             if (CheckAnswer == true && CheckQuestion == true) //Kijkt of er een vraag is ingevuld en true of false is ingevuld
             {
                 //Slaat de Vraag op in een text file
-                StreamWriter Question10 = new StreamWriter(Application.StartupPath + "\\info\\" + "Question10.txt");
-                Question10.WriteLine(tboxVraag.Text);
-                Question10.Close();
+                StreamWriter Question7 = new StreamWriter(Application.StartupPath + "\\info\\" + "Question7.txt");
+                Question7.WriteLine(tboxVraag.Text);
+                Question7.Close();
 
                 //Slaat het Antwoord op in een text file
-                StreamWriter Question10TrueFalse = new StreamWriter(Application.StartupPath + "\\info\\" + "Question10TrueFalse.txt");
-                Question10TrueFalse.WriteLine(Answer);
-                Question10TrueFalse.Close();
+                StreamWriter Question7TrueFalse = new StreamWriter(Application.StartupPath + "\\info\\" + "Question7TrueFalse.txt");
+                Question7TrueFalse.WriteLine(Answer);
+                Question7TrueFalse.Close();
 
                 this.Hide();
-                MakerTrueOrFalse3 MakerTrueOrFalse3 = new MakerTrueOrFalse3();
-                MakerTrueOrFalse3.Show();
+                MakerTrueOrFalse8 MakerTrueOrFalse8 = new MakerTrueOrFalse8();
+                MakerTrueOrFalse8.Show();
             }
             if (CheckAnswer == false) //Als er geen true of false is ingevuld dan vermeld die dat met de label lblNoaswer
             {

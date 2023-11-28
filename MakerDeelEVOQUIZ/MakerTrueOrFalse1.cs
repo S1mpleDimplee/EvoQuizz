@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,7 @@ namespace Makerdeel2
         {
             InitializeComponent();
         }
-        string Question;
-        bool Answer;
+        string Answer;
 
         bool CheckAnswer;
         bool CheckQuestion;
@@ -36,8 +36,7 @@ namespace Makerdeel2
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
-            Answer = true; //Geeft het antwoord de waarde true
-
+            Answer = "true"; //Geeft het antwoord de waarde true
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
@@ -47,7 +46,7 @@ namespace Makerdeel2
 
         private void btnFalse_Click(object sender, EventArgs e)
         {
-            Answer = false; //Geeft het antwoord de waarde False
+            Answer = "false" ; //Geeft het antwoord de waarde False
 
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
@@ -74,8 +73,8 @@ namespace Makerdeel2
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormVraagOptieKeuze formVraagOptieKeuze = new FormVraagOptieKeuze();
-            formVraagOptieKeuze.Show();
+            MakerTrueOrFalse2 MakerTrueOrFalse2 = new MakerTrueOrFalse2();
+            MakerTrueOrFalse2.Show();
             this.Close();
         }
 
@@ -83,13 +82,20 @@ namespace Makerdeel2
         {
             if (CheckAnswer == true && CheckQuestion == true) //Kijkt of er een vraag is ingevuld en true of false is ingevuld
             {
+                //Slaat de Vraag op in een text file
+                StreamWriter Question1 = new StreamWriter(Application.StartupPath + "\\info\\" + "Question1.txt");
+                Question1.WriteLine(tboxVraag.Text);
+                Question1.Close();
 
-                Question = tboxVraag.Text;
+                //Slaat het Antwoord op in een text file
+                StreamWriter Question1TrueFalse = new StreamWriter(Application.StartupPath + "\\info\\" + "Question1TrueFalse.txt");
+                Question1TrueFalse.WriteLine(Answer);
+                Question1TrueFalse.Close();
+
+                //Gaat naar de volgende form
                 this.Hide();
-                FormVraagTest formVraagTest = new FormVraagTest();
-                formVraagTest.Show();
-                formVraagTest.Question = Question;
-                formVraagTest.Answer = Answer;
+                MakerTrueOrFalse2 MakerTrueOrFalse2 = new MakerTrueOrFalse2();
+                MakerTrueOrFalse2.Show();
             }
             if (CheckAnswer == false) //Als er geen true of false is ingevuld dan vermeld die dat met de label lblNoaswer
             {

@@ -1,6 +1,6 @@
 ﻿namespace MakerDeelEVOQUIZ
 {
-    partial class MakerTrueOrFalse3
+    partial class MakerTrueOrFalse9
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerTrueOrFalse3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerTrueOrFalse9));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,16 +57,16 @@
             this.label1.BackColor = System.Drawing.SystemColors.GrayText;
             this.label1.Font = new System.Drawing.Font("ROG Fonts", 35.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(227, 77);
+            this.label1.Location = new System.Drawing.Point(237, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(520, 72);
+            this.label1.Size = new System.Drawing.Size(525, 72);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Vraag 3/10";
+            this.label1.Text = "Vraag 9/10";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(198, 77);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(547, 72);
@@ -76,7 +76,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox2.Location = new System.Drawing.Point(-451, 170);
+            this.pictureBox2.Location = new System.Drawing.Point(-441, 170);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(2769, 30);
@@ -87,7 +87,7 @@
             // 
             this.btnNext.BackColor = System.Drawing.Color.Transparent;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(1645, 670);
+            this.btnNext.Location = new System.Drawing.Point(1654, 677);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(309, 279);
@@ -101,7 +101,7 @@
             this.pboxLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pboxLogo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pboxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pboxLogo.Image")));
-            this.pboxLogo.Location = new System.Drawing.Point(818, 0);
+            this.pboxLogo.Location = new System.Drawing.Point(828, 0);
             this.pboxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pboxLogo.Name = "pboxLogo";
             this.pboxLogo.Size = new System.Drawing.Size(219, 172);
@@ -113,7 +113,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(-10, 0);
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(204, 174);
@@ -128,7 +128,7 @@
             this.lblNoquestion.BackColor = System.Drawing.Color.Transparent;
             this.lblNoquestion.Font = new System.Drawing.Font("ROG Fonts", 20F);
             this.lblNoquestion.ForeColor = System.Drawing.Color.Orange;
-            this.lblNoquestion.Location = new System.Drawing.Point(555, 888);
+            this.lblNoquestion.Location = new System.Drawing.Point(565, 888);
             this.lblNoquestion.Name = "lblNoquestion";
             this.lblNoquestion.Size = new System.Drawing.Size(834, 41);
             this.lblNoquestion.TabIndex = 35;
@@ -141,7 +141,7 @@
             this.lblNoanswer.BackColor = System.Drawing.Color.Transparent;
             this.lblNoanswer.Font = new System.Drawing.Font("ROG Fonts", 20F);
             this.lblNoanswer.ForeColor = System.Drawing.Color.Orange;
-            this.lblNoanswer.Location = new System.Drawing.Point(555, 888);
+            this.lblNoanswer.Location = new System.Drawing.Point(565, 888);
             this.lblNoanswer.Name = "lblNoanswer";
             this.lblNoanswer.Size = new System.Drawing.Size(793, 41);
             this.lblNoanswer.TabIndex = 34;
@@ -154,14 +154,14 @@
             this.btnFalse.AutoSize = true;
             this.btnFalse.BackColor = System.Drawing.Color.DarkGray;
             this.btnFalse.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnFalse.Location = new System.Drawing.Point(1020, 561);
+            this.btnFalse.Location = new System.Drawing.Point(1030, 561);
             this.btnFalse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFalse.Name = "btnFalse";
             this.btnFalse.Size = new System.Drawing.Size(508, 290);
             this.btnFalse.TabIndex = 33;
             this.btnFalse.Text = "FALSE";
             this.btnFalse.UseVisualStyleBackColor = false;
-            this.btnFalse.Click += new System.EventHandler(this.btnFalse_Click_1);
+            this.btnFalse.Click += new System.EventHandler(this.btnFalse_Click);
             // 
             // btnTrue
             // 
@@ -169,7 +169,7 @@
             this.btnTrue.AutoSize = true;
             this.btnTrue.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnTrue.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnTrue.Location = new System.Drawing.Point(311, 561);
+            this.btnTrue.Location = new System.Drawing.Point(321, 561);
             this.btnTrue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(508, 290);
@@ -184,7 +184,7 @@
             this.tboxVraag.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tboxVraag.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxVraag.ForeColor = System.Drawing.Color.White;
-            this.tboxVraag.Location = new System.Drawing.Point(127, 272);
+            this.tboxVraag.Location = new System.Drawing.Point(137, 272);
             this.tboxVraag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tboxVraag.Name = "tboxVraag";
             this.tboxVraag.Size = new System.Drawing.Size(1591, 132);
@@ -194,7 +194,7 @@
             // bar
             // 
             this.bar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.bar.Location = new System.Drawing.Point(-39, -12);
+            this.bar.Location = new System.Drawing.Point(-29, -12);
             this.bar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bar.Name = "bar";
             this.bar.Size = new System.Drawing.Size(2593, 186);
@@ -209,18 +209,17 @@
             this.pboxBackground.Location = new System.Drawing.Point(0, 0);
             this.pboxBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pboxBackground.Name = "pboxBackground";
-            this.pboxBackground.Size = new System.Drawing.Size(1924, 1013);
+            this.pboxBackground.Size = new System.Drawing.Size(1924, 1014);
             this.pboxBackground.TabIndex = 38;
             this.pboxBackground.TabStop = false;
             // 
-            // MakerTrueOrFalse3
+            // MakerTrueOrFalse9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1013);
+            this.ClientSize = new System.Drawing.Size(1924, 1014);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -234,11 +233,10 @@
             this.Controls.Add(this.tboxVraag);
             this.Controls.Add(this.bar);
             this.Controls.Add(this.pboxBackground);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MakerTrueOrFalse3";
-            this.Text = "MakerTrueOrFalse3";
+            this.Name = "MakerTrueOrFalse9";
+            this.Text = "MakerTrueOrFalse9";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MakerTrueOrFalse3_Load);
+            this.Load += new System.EventHandler(this.MakerTrueOrFalse9_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();

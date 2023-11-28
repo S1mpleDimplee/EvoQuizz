@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MakerDeelEVOQUIZ
 {
-    public partial class FormVraagTest : Form
+    public partial class FormVraag1 : Form
     {
 
-        public string Question
-        {
-            get => question; internal set
-            {
-                question = value;
-            }
-        }
-
-        public bool Answer
-        {
-            get => answer; internal set
-            {
-                answer = value;
-            }
-        }
 
         private string question;
 
@@ -42,12 +28,12 @@ namespace MakerDeelEVOQUIZ
 
         bool LoopStop = false;
 
-        bool AnswerUser;
-        private bool answer;
+        string AnswerUser;
+        string answer;
 
         int thatis;
 
-        public FormVraagTest()
+        public FormVraag1()
         {
             InitializeComponent();
         }
@@ -65,7 +51,7 @@ namespace MakerDeelEVOQUIZ
             //Hier wacht hij 1 miliseconden en geeft daarna lblVraag de waarde van de variable in
 
             await Task.Delay(1);
-            lblVraag.Text = question;
+            QuestionLoad();
 
             while (true) //Start de loop van de timer en maakt de buttons zichtbaar
             {
@@ -86,7 +72,7 @@ namespace MakerDeelEVOQUIZ
 
         private async void btnTrue_Click(object sender, EventArgs e)
         {
-            AnswerUser = true;
+            AnswerUser = "true";
 
             lblVraag.Visible = false;
             lblThatis.Visible = true;
@@ -141,7 +127,7 @@ namespace MakerDeelEVOQUIZ
         private void btnFalse_Click(object sender, EventArgs e)
         {
             {
-                AnswerUser = false;
+                AnswerUser = "false";
                 if (AnswerUser == answer)
                 {
                     btnFalse.BackColor = Color.Goldenrod;
@@ -480,6 +466,43 @@ namespace MakerDeelEVOQUIZ
                 formleaderboard.finalScore = finalScore;
                 this.Hide();
                 formleaderboard.Show();
+            }
+        }
+        private void QuestionLoad()
+        {
+            //Vind de Path naar de file
+            string filePathQuestion = Path.Combine(Application.StartupPath, "info", "Question1.txt");
+
+            if (File.Exists(filePathQuestion)) //Kijkt na of de file bestaat
+            {
+                //Leest alle lijnen van de file
+                List<string> Question1 = File.ReadAllLines(filePathQuestion).ToList();
+
+                //Schijft alle lijnen op
+                File.WriteAllLines(filePathQuestion, Question1);
+
+                //Laat label zien
+                if (Question1.Count > 0)
+                {
+                    lblVraag.Text = Question1[0];
+                }
+            }
+
+            string filePathTrueFalse = Path.Combine(Application.StartupPath, "info", "Question1TrueFalse.txt");
+
+            if (File.Exists(filePathTrueFalse)) //Kijkt na of de file bestaat
+            {
+                // Leest alle lijnen van de file
+                List<string> Answer1 = File.ReadAllLines(filePathTrueFalse).ToList();
+
+                // Schijft alle lijnen op
+                File.WriteAllLines(filePathTrueFalse, Answer1);
+
+                // Laat label zien
+                if (Answer1.Count > 0)
+                {
+                    answer = Answer1[0];
+                }
             }
         }
     }

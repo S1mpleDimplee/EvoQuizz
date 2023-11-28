@@ -1,5 +1,4 @@
-﻿using Makerdeel2;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +11,16 @@ using System.Windows.Forms;
 
 namespace MakerDeelEVOQUIZ
 {
-    public partial class MakerTrueOrFalse2 : Form
+    public partial class MakerTrueOrFalse10 : Form
     {
-        public MakerTrueOrFalse2()
+        public MakerTrueOrFalse10()
         {
             InitializeComponent();
         }
-
         bool Answer;
         bool CheckAnswer;
         bool CheckQuestion;
-        private void MakerTrueOrFalse2_Load(object sender, EventArgs e)
+        private void MakerTrueOrFalse10_Load(object sender, EventArgs e)
         {
             //Dit maakt de button borders ontzichtbar
             btnFalse.FlatStyle = FlatStyle.Flat;
@@ -37,6 +35,7 @@ namespace MakerDeelEVOQUIZ
         private void btnTrue_Click(object sender, EventArgs e)
         {
             Answer = true; //Geeft het antwoord de waarde true
+
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
@@ -47,6 +46,7 @@ namespace MakerDeelEVOQUIZ
         private void btnFalse_Click(object sender, EventArgs e)
         {
             Answer = false; //Geeft het antwoord de waarde False
+
             CheckAnswer = true; //Kijkt of er wel True of False is ingedrukt
 
             //Maakt de buttons andere kleur
@@ -72,8 +72,8 @@ namespace MakerDeelEVOQUIZ
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MakerTrueOrFalse1 MakerTrueOrFalse1 = new MakerTrueOrFalse1();
-            MakerTrueOrFalse1.Show();
+            MakerTrueOrFalseNaam MakerTrueOrFalseNaam = new MakerTrueOrFalseNaam();
+            MakerTrueOrFalseNaam.Show();
             this.Close();
         }
 
@@ -92,8 +92,8 @@ namespace MakerDeelEVOQUIZ
                 Question10TrueFalse.Close();
 
                 this.Hide();
-                MakerTrueOrFalse3 MakerTrueOrFalse3 = new MakerTrueOrFalse3();
-                MakerTrueOrFalse3.Show();
+                FormVraag1 formVraagTest = new FormVraag1();
+                formVraagTest.Show();
             }
             if (CheckAnswer == false) //Als er geen true of false is ingevuld dan vermeld die dat met de label lblNoaswer
             {

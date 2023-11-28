@@ -1,6 +1,6 @@
 ﻿namespace MakerDeelEVOQUIZ
 {
-    partial class FormVraagTest
+    partial class FormVraag1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVraagTest));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVraag1));
             this.lblVraag = new System.Windows.Forms.Label();
             this.btnTrue = new System.Windows.Forms.Button();
             this.btnFalse = new System.Windows.Forms.Button();
@@ -116,7 +116,7 @@
             // 
             this.prbTijd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.prbTijd.ForeColor = System.Drawing.Color.Purple;
-            this.prbTijd.Location = new System.Drawing.Point(42, 666);
+            this.prbTijd.Location = new System.Drawing.Point(22, 665);
             this.prbTijd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prbTijd.Name = "prbTijd";
             this.prbTijd.Size = new System.Drawing.Size(1813, 62);
@@ -154,7 +154,7 @@
             this.lblThatis.BackColor = System.Drawing.Color.Transparent;
             this.lblThatis.Font = new System.Drawing.Font("ROG Fonts", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThatis.ForeColor = System.Drawing.Color.White;
-            this.lblThatis.Location = new System.Drawing.Point(467, 400);
+            this.lblThatis.Location = new System.Drawing.Point(545, 400);
             this.lblThatis.Name = "lblThatis";
             this.lblThatis.Size = new System.Drawing.Size(800, 80);
             this.lblThatis.TabIndex = 14;
@@ -164,10 +164,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -11);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2151, 1102);
+            this.pictureBox1.Size = new System.Drawing.Size(2116, 1102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -182,13 +183,13 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
-            // FormVraagTest
+            // FormVraag1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblThatis);
@@ -202,7 +203,7 @@
             this.Controls.Add(this.lblVraag);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormVraagTest";
+            this.Name = "FormVraag1";
             this.Text = "VraagTest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VraagTest_Load);
