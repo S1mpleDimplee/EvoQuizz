@@ -36,7 +36,7 @@
             this.btnFalse = new System.Windows.Forms.Button();
             this.bar = new System.Windows.Forms.PictureBox();
             this.lblNoquestion = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblQuestionnumber = new System.Windows.Forms.Label();
             this.lblNoanswer = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.pboxBackground = new System.Windows.Forms.PictureBox();
@@ -143,17 +143,17 @@
             this.lblNoquestion.Text = "You have not entered a Question!";
             this.lblNoquestion.Visible = false;
             // 
-            // label1
+            // lblQuestionnumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Font = new System.Drawing.Font("ROG Fonts", 35.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(229, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(500, 72);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Vraag 1/10";
+            this.lblQuestionnumber.AutoSize = true;
+            this.lblQuestionnumber.BackColor = System.Drawing.SystemColors.GrayText;
+            this.lblQuestionnumber.Font = new System.Drawing.Font("ROG Fonts", 35.8F, System.Drawing.FontStyle.Bold);
+            this.lblQuestionnumber.ForeColor = System.Drawing.Color.White;
+            this.lblQuestionnumber.Location = new System.Drawing.Point(229, 77);
+            this.lblQuestionnumber.Name = "lblQuestionnumber";
+            this.lblQuestionnumber.Size = new System.Drawing.Size(500, 72);
+            this.lblQuestionnumber.TabIndex = 10;
+            this.lblQuestionnumber.Text = "Vraag 1/10";
             // 
             // lblNoanswer
             // 
@@ -221,7 +221,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1033);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblQuestionnumber);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnNext);
@@ -261,7 +261,7 @@
         private System.Windows.Forms.Button btnFalse;
         private System.Windows.Forms.PictureBox bar;
         private System.Windows.Forms.Label lblNoquestion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblQuestionnumber;
         private System.Windows.Forms.Label lblNoanswer;
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox pboxBackground;

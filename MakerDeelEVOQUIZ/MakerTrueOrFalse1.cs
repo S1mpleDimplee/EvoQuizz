@@ -19,11 +19,11 @@ namespace Makerdeel2
             InitializeComponent();
         }
         string Answer;
-
         bool CheckAnswer;
         bool CheckQuestion;
+        int QuestionNumber = 1;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             //Dit maakt de button borders ontzichtbar
             btnFalse.FlatStyle = FlatStyle.Flat;
@@ -32,6 +32,9 @@ namespace Makerdeel2
             btnTrue.FlatStyle = FlatStyle.Flat;
             btnTrue.FlatAppearance.BorderSize = 8;
             btnTrue.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
+            FormLoading();
+            await Task.Delay(1);
+            lblQuestionnumber.Text = $"Question{QuestionNumber}/10";
         }
 
         private void btnTrue_Click(object sender, EventArgs e)
@@ -83,19 +86,23 @@ namespace Makerdeel2
             if (CheckAnswer == true && CheckQuestion == true) //Kijkt of er een vraag is ingevuld en true of false is ingevuld
             {
                 //Slaat de Vraag op in een text file
-                StreamWriter Question1 = new StreamWriter(Application.StartupPath + "\\info\\" + "Question1.txt");
+                StreamWriter Question1 = new StreamWriter(Application.StartupPath + "\\info\\" + $"Question{QuestionNumber}.txt");
                 Question1.WriteLine(tboxVraag.Text);
                 Question1.Close();
 
                 //Slaat het Antwoord op in een text file
-                StreamWriter Question1TrueFalse = new StreamWriter(Application.StartupPath + "\\info\\" + "Question1TrueFalse.txt");
+                StreamWriter Question1TrueFalse = new StreamWriter(Application.StartupPath + "\\info\\" + $"Question{QuestionNumber}TrueFalse.txt");
                 Question1TrueFalse.WriteLine(Answer);
                 Question1TrueFalse.Close();
 
+                QuestionNumber = +1;
+                QuestionNumberfunction();
+
+                await Task.Delay(1);
+
                 //Gaat naar de volgende form
-                this.Hide();
-                MakerTrueOrFalse2 MakerTrueOrFalse2 = new MakerTrueOrFalse2();
-                MakerTrueOrFalse2.Show();
+                this.Close();
+                this.Show();
             }
             if (CheckAnswer == false) //Als er geen true of false is ingevuld dan vermeld die dat met de label lblNoaswer
             {
@@ -108,6 +115,26 @@ namespace Makerdeel2
                 lblNoquestion.Visible = true;
                 await Task.Delay(4000);
                 lblNoquestion.Visible = false;
+            }
+        }
+
+        private void QuestionNumberfunction()
+        {
+            StreamWriter QuestionNumber = new StreamWriter(Application.StartupPath + "\\info\\" + "QuestionNumber.txt");
+            QuestionNumber.WriteLine(QuestionNumber);
+            QuestionNumber.Close();
+        }
+        private void FormLoading()
+        {
+            string filePathTimer = Path.Combine(Application.StartupPath, "info", "QuestionNumber.txt");
+
+            if (File.Exists(filePathTimer)) //Kijkt na of de file bestaat
+            {
+                // Leest alle lijnen van de file
+                List<string> QuestionNumber = File.ReadAllLines(filePathTimer).ToList();
+
+                // Schijft alle lijnen op
+                File.WriteAllLines(filePathTimer, QuestionNumber);
             }
         }
     }

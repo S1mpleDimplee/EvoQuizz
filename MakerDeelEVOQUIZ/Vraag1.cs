@@ -18,7 +18,7 @@ namespace MakerDeelEVOQUIZ
 
         private string question;
 
-        int timerSpeed = 20;
+        int timerSpeed;
         int totalScore = 1000;
         int timer2 = 10;
         int timer3 = 20;
@@ -30,7 +30,6 @@ namespace MakerDeelEVOQUIZ
 
         string AnswerUser;
         string answer;
-
         int thatis;
 
         public FormVraag1()
@@ -503,6 +502,17 @@ namespace MakerDeelEVOQUIZ
                 {
                     answer = Answer1[0];
                 }
+            }
+
+            string filePathTimer = Path.Combine(Application.StartupPath, "info", "timerSpeed.txt");
+
+            if (File.Exists(filePathTimer)) //Kijkt na of de file bestaat
+            {
+                // Leest alle lijnen van de file
+                List<string> timerSpeed = File.ReadAllLines(filePathTimer).ToList();
+
+                // Schijft alle lijnen op
+                File.WriteAllLines(filePathTimer, timerSpeed); 
             }
         }
     }

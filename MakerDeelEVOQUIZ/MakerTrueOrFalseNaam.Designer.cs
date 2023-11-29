@@ -153,6 +153,7 @@
             this.btn30Sec.TabIndex = 76;
             this.btn30Sec.Text = "30 Seconds";
             this.btn30Sec.UseVisualStyleBackColor = false;
+            this.btn30Sec.Click += new System.EventHandler(this.btn30Sec_Click);
             // 
             // btn20Sec
             // 
@@ -165,6 +166,7 @@
             this.btn20Sec.TabIndex = 77;
             this.btn20Sec.Text = "20 Seconds";
             this.btn20Sec.UseVisualStyleBackColor = false;
+            this.btn20Sec.Click += new System.EventHandler(this.btn20Sec_Click);
             // 
             // btn10Sec
             // 
@@ -177,6 +179,7 @@
             this.btn10Sec.TabIndex = 78;
             this.btn10Sec.Text = "10 Seconds";
             this.btn10Sec.UseVisualStyleBackColor = false;
+            this.btn10Sec.Click += new System.EventHandler(this.btn10Sec_Click);
             // 
             // btnNext
             // 
