@@ -214,6 +214,7 @@
             this.Controls.Add(this.pboxBackground);
             this.Name = "MakerTrueOrFalseNaam";
             this.Text = "MakerTrueOrFalseNaam";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();

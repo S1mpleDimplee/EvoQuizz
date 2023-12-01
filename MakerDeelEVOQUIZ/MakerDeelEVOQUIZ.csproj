@@ -59,24 +59,6 @@
     <Compile Include="leaderbord.Designer.cs">
       <DependentUpon>leaderbord.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakerTrueOrFalse10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse10.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse2.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse8.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse8.cs</DependentUpon>
-    </Compile>
     <Compile Include="MakerTrueOrFalse1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,42 +70,6 @@
     </Compile>
     <Compile Include="FormVraagMaker.Designer.cs">
       <DependentUpon>FormVraagMaker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse3.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse4.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse5.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse6.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse7.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakerTrueOrFalse9.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse9.cs</DependentUpon>
     </Compile>
     <Compile Include="MakerTrueOrFalseNaam.cs">
       <SubType>Form</SubType>
@@ -150,33 +96,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVraagMaker.resx">
       <DependentUpon>FormVraagMaker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse10.resx">
-      <DependentUpon>MakerTrueOrFalse10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse2.resx">
-      <DependentUpon>MakerTrueOrFalse2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse3.resx">
-      <DependentUpon>MakerTrueOrFalse3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse4.resx">
-      <DependentUpon>MakerTrueOrFalse4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse5.resx">
-      <DependentUpon>MakerTrueOrFalse5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse6.resx">
-      <DependentUpon>MakerTrueOrFalse6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse7.resx">
-      <DependentUpon>MakerTrueOrFalse7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse8.resx">
-      <DependentUpon>MakerTrueOrFalse8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse9.resx">
-      <DependentUpon>MakerTrueOrFalse9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakerTrueOrFalseNaam.resx">
       <DependentUpon>MakerTrueOrFalseNaam.cs</DependentUpon>

@@ -42,6 +42,7 @@
             this.pboxBackground = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNextEnd = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNextEnd)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTrue
@@ -149,11 +151,11 @@
             this.lblQuestionnumber.BackColor = System.Drawing.SystemColors.GrayText;
             this.lblQuestionnumber.Font = new System.Drawing.Font("ROG Fonts", 35.8F, System.Drawing.FontStyle.Bold);
             this.lblQuestionnumber.ForeColor = System.Drawing.Color.White;
-            this.lblQuestionnumber.Location = new System.Drawing.Point(229, 77);
+            this.lblQuestionnumber.Location = new System.Drawing.Point(191, 77);
             this.lblQuestionnumber.Name = "lblQuestionnumber";
-            this.lblQuestionnumber.Size = new System.Drawing.Size(500, 72);
+            this.lblQuestionnumber.Size = new System.Drawing.Size(630, 72);
             this.lblQuestionnumber.TabIndex = 10;
-            this.lblQuestionnumber.Text = "Vraag 1/10";
+            this.lblQuestionnumber.Text = "Question 1/10";
             // 
             // lblNoanswer
             // 
@@ -163,23 +165,23 @@
             this.lblNoanswer.ForeColor = System.Drawing.Color.Orange;
             this.lblNoanswer.Location = new System.Drawing.Point(557, 888);
             this.lblNoanswer.Name = "lblNoanswer";
-            this.lblNoanswer.Size = new System.Drawing.Size(793, 41);
+            this.lblNoanswer.Size = new System.Drawing.Size(763, 41);
             this.lblNoanswer.TabIndex = 5;
-            this.lblNoanswer.Text = "You have not choosen a Answer!";
+            this.lblNoanswer.Text = "You have not chosen a Answer!";
             this.lblNoanswer.Visible = false;
             // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.Transparent;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(1646, 677);
+            this.btnNext.Location = new System.Drawing.Point(1654, 681);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(309, 279);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNext.TabIndex = 13;
             this.btnNext.TabStop = false;
-            this.btnNext.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // pboxBackground
             // 
@@ -213,6 +215,19 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // btnNextEnd
+            // 
+            this.btnNextEnd.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextEnd.Image = ((System.Drawing.Image)(resources.GetObject("btnNextEnd.Image")));
+            this.btnNextEnd.Location = new System.Drawing.Point(1770, 533);
+            this.btnNextEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNextEnd.Name = "btnNextEnd";
+            this.btnNextEnd.Size = new System.Drawing.Size(193, 140);
+            this.btnNextEnd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNextEnd.TabIndex = 18;
+            this.btnNextEnd.TabStop = false;
+            this.btnNextEnd.Click += new System.EventHandler(this.btnNextEnd_Click);
+            // 
             // MakerTrueOrFalse1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,6 +236,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1033);
+            this.Controls.Add(this.btnNextEnd);
             this.Controls.Add(this.lblQuestionnumber);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -247,6 +263,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNextEnd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,6 +284,7 @@
         private System.Windows.Forms.PictureBox pboxBackground;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnNextEnd;
     }
 }
 
