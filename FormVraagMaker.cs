@@ -26,8 +26,8 @@ namespace MakerDeelEVOQUIZ
         private void btnTrueFalse_Click(object sender, EventArgs e)
         {
             //Sluit deze form en gaat naarde volgende
-            MakerTrueOrFalse1 form1 = new MakerTrueOrFalse1(); 
-            form1.Show();
+            MakerTrueOrFalseNaam MakerTrueOrFalseNaam = new MakerTrueOrFalseNaam();
+            MakerTrueOrFalseNaam.Show();
             this.Hide();
         }
 

@@ -18,29 +18,47 @@ namespace MakerDeelEVOQUIZ
             InitializeComponent();
         }
         string timerSpeed;
+        string Quizname;
         private void btn10Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "10";
-            fileSend();
         }
 
         private void btn20Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "20";
-            fileSend();
         }
 
         private void btn30Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "30";
+        }
+
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Quizname = tboxQuizname.Text;
             fileSend();
         }
 
-        private void fileSend()
+
+        private async void fileSend()
         {
-            StreamWriter timerSpeed = new StreamWriter(Application.StartupPath + "\\info\\" + "timerSpeed.txt");
-            timerSpeed.WriteLine(timerSpeed);
-            timerSpeed.Close();
+            string folderPathQuizname = Path.Combine(Application.StartupPath, "database", Quizname);
+            if (!Directory.Exists(folderPathQuizname))
+            {
+                Directory.CreateDirectory(folderPathQuizname);
+                
+
+                StreamWriter timerSpeedtxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
+                timerSpeedtxt.WriteLine(timerSpeedtxt);
+                timerSpeedtxt.Close();
+
+                StreamWriter Quiznametxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}.txt");
+                Quiznametxt.WriteLine(Quiznametxt);
+                Quiznametxt.Close();
+            }
+            }
         }
-    }
 }
+

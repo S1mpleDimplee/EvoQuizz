@@ -16,7 +16,6 @@ namespace MakerDeelEVOQUIZ
     {
 
 
-        private string question;
 
         int timerSpeed;
         int totalScore = 1000;
