@@ -39,10 +39,10 @@
             // 
             // btnMaker
             // 
-            this.btnMaker.Location = new System.Drawing.Point(1453, 418);
-            this.btnMaker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaker.Location = new System.Drawing.Point(1120, 381);
+            this.btnMaker.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaker.Name = "btnMaker";
-            this.btnMaker.Size = new System.Drawing.Size(713, 406);
+            this.btnMaker.Size = new System.Drawing.Size(486, 293);
             this.btnMaker.TabIndex = 0;
             this.btnMaker.Text = "Create Quizes";
             this.btnMaker.UseVisualStyleBackColor = true;
@@ -50,10 +50,10 @@
             // 
             // btnQuizes
             // 
-            this.btnQuizes.Location = new System.Drawing.Point(163, 373);
-            this.btnQuizes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuizes.Location = new System.Drawing.Point(244, 381);
+            this.btnQuizes.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuizes.Name = "btnQuizes";
-            this.btnQuizes.Size = new System.Drawing.Size(469, 262);
+            this.btnQuizes.Size = new System.Drawing.Size(478, 293);
             this.btnQuizes.TabIndex = 1;
             this.btnQuizes.Text = "Play Quizes";
             this.btnQuizes.UseVisualStyleBackColor = true;
@@ -61,8 +61,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1064, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(833, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(405, 329);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +74,7 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(2560, 1329);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.btnQuizes);
             this.Controls.Add(this.btnMaker);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Formhomepage";
             this.Text = "Formhomepage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

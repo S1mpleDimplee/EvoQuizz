@@ -59,11 +59,11 @@
     <Compile Include="leaderbord.Designer.cs">
       <DependentUpon>leaderbord.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakerTrueOrFalse1.cs">
+    <Compile Include="MakerTrueOrFalse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MakerTrueOrFalse1.Designer.cs">
-      <DependentUpon>MakerTrueOrFalse1.cs</DependentUpon>
+    <Compile Include="MakerTrueOrFalse.Designer.cs">
+      <DependentUpon>MakerTrueOrFalse.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVraagMaker.cs">
       <SubType>Form</SubType>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="MakerTrueOrFalseNaam.Designer.cs">
       <DependentUpon>MakerTrueOrFalseNaam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayMadeQuizes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayMadeQuizes.Designer.cs">
+      <DependentUpon>PlayMadeQuizes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,14 +97,17 @@
     <EmbeddedResource Include="leaderbord.resx">
       <DependentUpon>leaderbord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MakerTrueOrFalse1.resx">
-      <DependentUpon>MakerTrueOrFalse1.cs</DependentUpon>
+    <EmbeddedResource Include="MakerTrueOrFalse.resx">
+      <DependentUpon>MakerTrueOrFalse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVraagMaker.resx">
       <DependentUpon>FormVraagMaker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakerTrueOrFalseNaam.resx">
       <DependentUpon>MakerTrueOrFalseNaam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayMadeQuizes.resx">
+      <DependentUpon>PlayMadeQuizes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

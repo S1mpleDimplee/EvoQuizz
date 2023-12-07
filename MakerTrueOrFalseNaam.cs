@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Makerdeel2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,30 +20,88 @@ namespace MakerDeelEVOQUIZ
         }
         string timerSpeed;
         string Quizname;
+        bool QuiznameCheck;
+        bool QuiztimerCheck;
         private void btn10Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "10";
+            btn10Sec.FlatStyle = FlatStyle.Flat;
+            btn10Sec.FlatAppearance.BorderColor = Color.Gold;
+            btn10Sec.FlatAppearance.BorderSize = 5;
+
+            btn20Sec.FlatStyle = FlatStyle.Flat;
+            btn20Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn20Sec.FlatAppearance.BorderSize = 5;
+
+            btn30Sec.FlatStyle = FlatStyle.Flat;
+            btn30Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn30Sec.FlatAppearance.BorderSize = 5;
+            QuiztimerCheck = true;
         }
 
         private void btn20Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "20";
+            btn10Sec.FlatStyle = FlatStyle.Flat;
+            btn10Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn10Sec.FlatAppearance.BorderSize = 5;
+
+            btn20Sec.FlatStyle = FlatStyle.Flat;
+            btn20Sec.FlatAppearance.BorderColor = Color.Gold;
+            btn20Sec.FlatAppearance.BorderSize = 5;
+
+            btn30Sec.FlatStyle = FlatStyle.Flat;
+            btn30Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn30Sec.FlatAppearance.BorderSize = 5;
+            QuiztimerCheck = true;
         }
 
         private void btn30Sec_Click(object sender, EventArgs e)
         {
             timerSpeed = "30";
+            btn10Sec.FlatStyle = FlatStyle.Flat;
+            btn10Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn10Sec.FlatAppearance.BorderSize = 5;
+
+            btn20Sec.FlatStyle = FlatStyle.Flat;
+            btn20Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn20Sec.FlatAppearance.BorderSize = 5;
+
+            btn30Sec.FlatStyle = FlatStyle.Flat;
+            btn30Sec.FlatAppearance.BorderColor = Color.Gold;
+            btn30Sec.FlatAppearance.BorderSize = 5;
+            QuiztimerCheck = true;
         }
 
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private async void btnNext_Click(object sender, EventArgs e)
         {
-            Quizname = tboxQuizname.Text;
-            fileSend();
+            if (QuiztimerCheck == true && QuiznameCheck == true)
+            {
+                Quizname = tboxQuizname.Text;
+                fileSend();
+
+                MakerTrueOrFalse makerTrueOrFalse = new MakerTrueOrFalse();
+                makerTrueOrFalse.Show();
+                makerTrueOrFalse.Quizname = Quizname;
+                this.Hide();
+            }
+            else if (QuiztimerCheck == false)
+            {
+                lblQuiztimercheck.Visible = true;
+                await Task.Delay(5000);
+                lblQuiztimercheck.Visible = false;
+            }
+            else if (QuiznameCheck == false)
+            {
+                lblQuiznamecheck.Visible = true;
+                await Task.Delay(5000);
+                lblQuiznamecheck.Visible = false;
+            }
         }
 
 
-        private async void fileSend()
+        private void fileSend()
         {
             string folderPathQuizname = Path.Combine(Application.StartupPath, "database", Quizname);
             if (!Directory.Exists(folderPathQuizname))
@@ -51,14 +110,43 @@ namespace MakerDeelEVOQUIZ
                 
 
                 StreamWriter timerSpeedtxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
-                timerSpeedtxt.WriteLine(timerSpeedtxt);
+                timerSpeedtxt.WriteLine(timerSpeed);
                 timerSpeedtxt.Close();
 
                 StreamWriter Quiznametxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}.txt");
                 Quiznametxt.WriteLine(Quiznametxt);
                 Quiznametxt.Close();
             }
+        }
+
+        private void MakerTrueOrFalseNaam_Load(object sender, EventArgs e)
+        {
+            btn10Sec.FlatStyle = FlatStyle.Flat;
+            btn10Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn10Sec.FlatAppearance.BorderSize = 5;
+
+            btn20Sec.FlatStyle = FlatStyle.Flat;
+            btn20Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn20Sec.FlatAppearance.BorderSize = 5;
+
+            btn30Sec.FlatStyle = FlatStyle.Flat;
+            btn30Sec.FlatAppearance.BorderColor = Color.Gray;
+            btn30Sec.FlatAppearance.BorderSize = 5;
+        }
+
+        private void tboxQuizname_TextChanged(object sender, EventArgs e)
+        {
+            string textboxtext;
+            textboxtext = tboxQuizname.Text;
+            if (textboxtext == string.Empty)
+            {
+                QuiznameCheck = false;
+            }
+            else
+            {
+                QuiznameCheck = true;
             }
         }
+    }
 }
 

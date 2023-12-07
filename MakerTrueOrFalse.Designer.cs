@@ -1,6 +1,6 @@
 ﻿namespace Makerdeel2
 {
-    partial class MakerTrueOrFalse1
+    partial class MakerTrueOrFalse
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerTrueOrFalse1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerTrueOrFalse));
             this.btnTrue = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
