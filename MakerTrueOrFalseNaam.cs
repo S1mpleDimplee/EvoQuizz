@@ -103,17 +103,17 @@ namespace MakerDeelEVOQUIZ
 
         private void fileSend()
         {
-            string folderPathQuizname = Path.Combine(Application.StartupPath, "database", Quizname);
+            string folderPathQuizname = Path.Combine(Application.StartupPath, "database", "dataquizquestions", Quizname);
             if (!Directory.Exists(folderPathQuizname))
             {
                 Directory.CreateDirectory(folderPathQuizname);
                 
 
-                StreamWriter timerSpeedtxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
+                StreamWriter timerSpeedtxt = new StreamWriter(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
                 timerSpeedtxt.WriteLine(timerSpeed);
                 timerSpeedtxt.Close();
 
-                StreamWriter Quiznametxt = new StreamWriter(Application.StartupPath + "\\database\\" + $"\\{Quizname}\\" + $"{Quizname}.txt");
+                StreamWriter Quiznametxt = new StreamWriter(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"{Quizname}.txt");
                 Quiznametxt.WriteLine(Quiznametxt);
                 Quiznametxt.Close();
             }

@@ -29,3 +29,4 @@ C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDee
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.pdb
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\Makerdeel2.MakerTrueOrFalse.resources
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.PlayMadeQuizes.resources
+C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.FormPlayQuizes.resources

@@ -23,5 +23,37 @@ namespace MakerDeelEVOQUIZ
             formVraagOptieKeuze.Show();
             this.Hide();
         }
+
+        private void btnPlay_MouseHover(object sender, EventArgs e)
+        {
+            pboxPlayGif.Enabled = true;
+        }
+
+        private void btnPlay_MouseLeave(object sender, EventArgs e)
+        {
+            pboxPlayGif.Enabled = false;
+        }
+
+        private void btnCreate_MouseHover(object sender, EventArgs e)
+        {
+            pboxCreategif.Enabled = true;
+        }
+
+        private void btnCreate_MouseLeave(object sender, EventArgs e)
+        {
+            pboxCreategif.Enabled = false;
+        }
+        private void Formhomepage_Load(object sender, EventArgs e)
+        {
+            pboxPlayGif.Enabled = false;
+            pboxCreategif.Enabled = false;
+        }
+
+        private void btnQuizes_Click(object sender, EventArgs e)
+        {
+            FormPlayQuizes formPlayQuizes = new FormPlayQuizes();
+            this.Hide();
+            formPlayQuizes.Show();
+        }
     }
 }

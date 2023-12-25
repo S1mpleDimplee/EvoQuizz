@@ -70,7 +70,7 @@
             this.pboxBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pboxBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pboxBackground.Location = new System.Drawing.Point(0, 0);
-            this.pboxBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pboxBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pboxBackground.Name = "pboxBackground";
             this.pboxBackground.Size = new System.Drawing.Size(1924, 1055);
             this.pboxBackground.TabIndex = 65;
@@ -92,7 +92,7 @@
             this.pboxLogo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pboxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pboxLogo.Image")));
             this.pboxLogo.Location = new System.Drawing.Point(829, 1);
-            this.pboxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pboxLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pboxLogo.Name = "pboxLogo";
             this.pboxLogo.Size = new System.Drawing.Size(219, 172);
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,7 +104,7 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.Location = new System.Drawing.Point(1, 1);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(204, 174);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +148,7 @@
             // btn30Sec
             // 
             this.btn30Sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn30Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold);
+            this.btn30Sec.Font = new System.Drawing.Font("ROG Fonts", 27F, System.Drawing.FontStyle.Bold);
             this.btn30Sec.ForeColor = System.Drawing.Color.White;
             this.btn30Sec.Location = new System.Drawing.Point(314, 650);
             this.btn30Sec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -162,7 +162,7 @@
             // btn20Sec
             // 
             this.btn20Sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn20Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold);
+            this.btn20Sec.Font = new System.Drawing.Font("ROG Fonts", 27F, System.Drawing.FontStyle.Bold);
             this.btn20Sec.ForeColor = System.Drawing.Color.White;
             this.btn20Sec.Location = new System.Drawing.Point(756, 650);
             this.btn20Sec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,7 +176,7 @@
             // btn10Sec
             // 
             this.btn10Sec.BackColor = System.Drawing.Color.Red;
-            this.btn10Sec.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold);
+            this.btn10Sec.Font = new System.Drawing.Font("ROG Fonts", 27F, System.Drawing.FontStyle.Bold);
             this.btn10Sec.ForeColor = System.Drawing.Color.White;
             this.btn10Sec.Location = new System.Drawing.Point(1198, 650);
             this.btn10Sec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -192,7 +192,7 @@
             this.btnNext.BackColor = System.Drawing.Color.Transparent;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.Location = new System.Drawing.Point(1602, 699);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(309, 279);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

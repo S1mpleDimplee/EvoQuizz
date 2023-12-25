@@ -324,6 +324,7 @@
             this.Controls.Add(this.pboxBackground);
             this.Name = "PlayMadeQuizes";
             this.Text = "PlayMadeQuizes";
+            this.Load += new System.EventHandler(this.PlayMadeQuizes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             this.ResumeLayout(false);
