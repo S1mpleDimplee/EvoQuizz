@@ -36,9 +36,11 @@
             this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.lblQuiz = new System.Windows.Forms.Label();
             this.lblMode = new System.Windows.Forms.Label();
+            this.pboxBackground = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMeerKeuzeVraag
@@ -130,6 +132,17 @@
             this.lblMode.TabIndex = 15;
             this.lblMode.Text = "Mode";
             // 
+            // pboxBackground
+            // 
+            this.pboxBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pboxBackground.BackgroundImage")));
+            this.pboxBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboxBackground.Location = new System.Drawing.Point(0, 0);
+            this.pboxBackground.Name = "pboxBackground";
+            this.pboxBackground.Size = new System.Drawing.Size(1904, 1041);
+            this.pboxBackground.TabIndex = 16;
+            this.pboxBackground.TabStop = false;
+            // 
             // FormVraagOptieKeuze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,12 +157,14 @@
             this.Controls.Add(this.btnTrueFalse);
             this.Controls.Add(this.btnMeerKeuzeVraag);
             this.Controls.Add(this.bar);
+            this.Controls.Add(this.pboxBackground);
             this.Name = "FormVraagOptieKeuze";
             this.Text = "FormVraagMaker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +179,6 @@
         private System.Windows.Forms.PictureBox pboxLogo;
         private System.Windows.Forms.Label lblQuiz;
         private System.Windows.Forms.Label lblMode;
+        private System.Windows.Forms.PictureBox pboxBackground;
     }
 }

@@ -16,5 +16,12 @@ namespace MakerDeelEVOQUIZ
         {
             InitializeComponent();
         }
+
+        private void btnQuizesPlayers_Click(object sender, EventArgs e)
+        {
+            QuizesMadeByPlayersPage playMadeQuizes = new QuizesMadeByPlayersPage();
+            playMadeQuizes.Show();
+            this.Hide();
+        }
     }
 }

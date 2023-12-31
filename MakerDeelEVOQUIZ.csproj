@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formhomepage.cs">
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formhomepage.Designer.cs">
-      <DependentUpon>Formhomepage.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPlayQuizes.cs">
       <SubType>Form</SubType>
@@ -83,22 +83,22 @@
     <Compile Include="MakerTrueOrFalseNaam.Designer.cs">
       <DependentUpon>MakerTrueOrFalseNaam.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayMadeQuizes.cs">
+    <Compile Include="QuizesMadeByPlayersPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayMadeQuizes.Designer.cs">
-      <DependentUpon>PlayMadeQuizes.cs</DependentUpon>
+    <Compile Include="QuizesMadeByPlayersPage.Designer.cs">
+      <DependentUpon>QuizesMadeByPlayersPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vraag1.cs">
+    <Compile Include="TrueOrFalsePlayQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vraag1.Designer.cs">
-      <DependentUpon>Vraag1.cs</DependentUpon>
+    <Compile Include="TrueOrFalsePlayQuiz.Designer.cs">
+      <DependentUpon>TrueOrFalsePlayQuiz.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formhomepage.resx">
-      <DependentUpon>Formhomepage.cs</DependentUpon>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPlayQuizes.resx">
       <DependentUpon>FormPlayQuizes.cs</DependentUpon>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="MakerTrueOrFalseNaam.resx">
       <DependentUpon>MakerTrueOrFalseNaam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayMadeQuizes.resx">
-      <DependentUpon>PlayMadeQuizes.cs</DependentUpon>
+    <EmbeddedResource Include="QuizesMadeByPlayersPage.resx">
+      <DependentUpon>QuizesMadeByPlayersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,8 +127,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vraag1.resx">
-      <DependentUpon>Vraag1.cs</DependentUpon>
+    <EmbeddedResource Include="TrueOrFalsePlayQuiz.resx">
+      <DependentUpon>TrueOrFalsePlayQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

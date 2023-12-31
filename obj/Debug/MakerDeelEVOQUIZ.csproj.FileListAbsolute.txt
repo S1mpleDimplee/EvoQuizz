@@ -17,7 +17,6 @@ C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\bin\Debug\MakerDee
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\bin\Debug\MakerDeelEVOQUIZ.exe
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\bin\Debug\MakerDeelEVOQUIZ.pdb
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.csproj.AssemblyReference.cache
-C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.Formhomepage.resources
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.Formleaderboard.resources
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.FormVraagOptieKeuze.resources
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.MakerTrueOrFalseNaam.resources
@@ -28,5 +27,6 @@ C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDee
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.exe
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.pdb
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\Makerdeel2.MakerTrueOrFalse.resources
-C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.PlayMadeQuizes.resources
 C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.FormPlayQuizes.resources
+C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.HomePage.resources
+C:\Users\jayla\source\repos\MakerDeelEVOQUIZ\MakerDeelEVOQUIZ\obj\Debug\MakerDeelEVOQUIZ.QuizesMadeByPlayersPage.resources

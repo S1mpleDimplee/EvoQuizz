@@ -60,6 +60,7 @@
             this.btnQuizesPlayers.TabIndex = 2;
             this.btnQuizesPlayers.Text = "Custom Quizes";
             this.btnQuizesPlayers.UseVisualStyleBackColor = false;
+            this.btnQuizesPlayers.Click += new System.EventHandler(this.btnQuizesPlayers_Click);
             // 
             // pboxBackground
             // 

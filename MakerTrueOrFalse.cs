@@ -190,7 +190,7 @@ namespace Makerdeel2
 
                 await Task.Delay(2000);
 
-                Formhomepage formhomepage = new Formhomepage();
+                HomePage formhomepage = new HomePage();
                 formhomepage.Show();
                 this.Hide();
             }

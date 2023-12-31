@@ -33,7 +33,9 @@ namespace MakerDeelEVOQUIZ
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            HomePage formhomepage = new HomePage();
+            formhomepage.Show();
+            this.Hide();
         }
     }
 }

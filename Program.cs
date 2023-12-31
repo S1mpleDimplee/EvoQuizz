@@ -16,7 +16,7 @@ namespace MakerDeelEVOQUIZ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formhomepage());
+            Application.Run(new HomePage());
         }
     }
 }

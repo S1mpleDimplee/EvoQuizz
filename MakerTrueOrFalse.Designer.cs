@@ -68,7 +68,7 @@
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
             this.btnTrue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTrue.Location = new System.Drawing.Point(235, 456);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(381, 236);
             this.btnTrue.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.tboxVraag.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tboxVraag.ForeColor = System.Drawing.Color.White;
             this.tboxVraag.Location = new System.Drawing.Point(97, 221);
-            this.tboxVraag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tboxVraag.Margin = new System.Windows.Forms.Padding(2);
             this.tboxVraag.Name = "tboxVraag";
             this.tboxVraag.Size = new System.Drawing.Size(1194, 107);
             this.tboxVraag.TabIndex = 0;
@@ -121,7 +121,7 @@
             this.btnFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
             this.btnFalse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnFalse.Location = new System.Drawing.Point(766, 456);
-            this.btnFalse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFalse.Margin = new System.Windows.Forms.Padding(2);
             this.btnFalse.Name = "btnFalse";
             this.btnFalse.Size = new System.Drawing.Size(381, 236);
             this.btnFalse.TabIndex = 3;
@@ -133,7 +133,7 @@
             // 
             this.bar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bar.Location = new System.Drawing.Point(-28, -10);
-            this.bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bar.Margin = new System.Windows.Forms.Padding(2);
             this.bar.Name = "bar";
             this.bar.Size = new System.Drawing.Size(1945, 151);
             this.bar.TabIndex = 8;
@@ -207,7 +207,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox2.Location = new System.Drawing.Point(-337, 138);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(2077, 24);
             this.pictureBox2.TabIndex = 16;
@@ -217,7 +217,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
             this.pictureBox1.Location = new System.Drawing.Point(144, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(410, 63);
             this.pictureBox1.TabIndex = 17;
@@ -239,12 +239,12 @@
             // 
             this.lblDone.AutoSize = true;
             this.lblDone.BackColor = System.Drawing.Color.Transparent;
-            this.lblDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
+            this.lblDone.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDone.ForeColor = System.Drawing.Color.Gold;
             this.lblDone.Location = new System.Drawing.Point(281, 294);
             this.lblDone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDone.Name = "lblDone";
-            this.lblDone.Size = new System.Drawing.Size(596, 63);
+            this.lblDone.Size = new System.Drawing.Size(802, 74);
             this.lblDone.TabIndex = 19;
             this.lblDone.Text = "Are you sure you done?";
             this.lblDone.Visible = false;
@@ -257,7 +257,7 @@
             this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
             this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDone.Location = new System.Drawing.Point(766, 456);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(2);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(381, 236);
             this.btnDone.TabIndex = 20;
@@ -274,7 +274,7 @@
             this.btnNotdone.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
             this.btnNotdone.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnNotdone.Location = new System.Drawing.Point(235, 456);
-            this.btnNotdone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNotdone.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotdone.Name = "btnNotdone";
             this.btnNotdone.Size = new System.Drawing.Size(381, 236);
             this.btnNotdone.TabIndex = 21;
@@ -315,7 +315,7 @@
             this.pboxSaving.BackColor = System.Drawing.Color.Transparent;
             this.pboxSaving.Image = ((System.Drawing.Image)(resources.GetObject("pboxSaving.Image")));
             this.pboxSaving.Location = new System.Drawing.Point(507, 351);
-            this.pboxSaving.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxSaving.Margin = new System.Windows.Forms.Padding(2);
             this.pboxSaving.Name = "pboxSaving";
             this.pboxSaving.Size = new System.Drawing.Size(76, 67);
             this.pboxSaving.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +352,7 @@
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.pboxBackground);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MakerTrueOrFalse";
             this.Text = "x";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

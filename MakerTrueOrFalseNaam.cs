@@ -18,6 +18,7 @@ namespace MakerDeelEVOQUIZ
         {
             InitializeComponent();
         }
+        int QuizNumber = 1;
         string timerSpeed;
         string Quizname;
         bool QuiznameCheck;
@@ -107,7 +108,7 @@ namespace MakerDeelEVOQUIZ
             if (!Directory.Exists(folderPathQuizname))
             {
                 Directory.CreateDirectory(folderPathQuizname);
-                
+
 
                 StreamWriter timerSpeedtxt = new StreamWriter(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
                 timerSpeedtxt.WriteLine(timerSpeed);
@@ -116,10 +117,26 @@ namespace MakerDeelEVOQUIZ
                 StreamWriter Quiznametxt = new StreamWriter(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"{Quizname}.txt");
                 Quiznametxt.WriteLine(Quiznametxt);
                 Quiznametxt.Close();
+
+                QuizSave();
+
             }
         }
-
-        private void MakerTrueOrFalseNaam_Load(object sender, EventArgs e)
+        private void QuizSave()
+        {
+            string pathQuizSaves = Path.Combine(Application.StartupPath + "\\database\\" + "\\datasavedquizes\\" + $"Quiz{QuizNumber}.txt");
+            if (!File.Exists(pathQuizSaves))
+            {
+                StreamWriter QuizNamesaved = new StreamWriter(Application.StartupPath + "\\database\\" + "\\datasavedquizes\\" + $"Quiz{QuizNumber}.txt");
+                QuizNamesaved.WriteLine(Quizname);
+                QuizNamesaved.Close();
+            }
+            else
+            {
+                QuizNumber++;
+            }
+        }
+            private void MakerTrueOrFalseNaam_Load(object sender, EventArgs e)
         {
             btn10Sec.FlatStyle = FlatStyle.Flat;
             btn10Sec.FlatAppearance.BorderColor = Color.Gray;
