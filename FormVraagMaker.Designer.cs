@@ -37,6 +37,7 @@
             this.lblQuiz = new System.Windows.Forms.Label();
             this.lblMode = new System.Windows.Forms.Label();
             this.pboxBackground = new System.Windows.Forms.PictureBox();
+            this.lblSoon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
@@ -143,13 +144,29 @@
             this.pboxBackground.TabIndex = 16;
             this.pboxBackground.TabStop = false;
             // 
+            // lblSoon
+            // 
+            this.lblSoon.AutoSize = true;
+            this.lblSoon.BackColor = System.Drawing.Color.Transparent;
+            this.lblSoon.Font = new System.Drawing.Font("Elephant", 45.8F, System.Drawing.FontStyle.Bold);
+            this.lblSoon.ForeColor = System.Drawing.Color.White;
+            this.lblSoon.Location = new System.Drawing.Point(244, 283);
+            this.lblSoon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSoon.Name = "lblSoon";
+            this.lblSoon.Size = new System.Drawing.Size(511, 80);
+            this.lblSoon.TabIndex = 17;
+            this.lblSoon.Text = "Comming Soon";
+            // 
             // FormVraagOptieKeuze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lblSoon);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.lblQuiz);
             this.Controls.Add(this.pboxLogo);
@@ -161,6 +178,7 @@
             this.Name = "FormVraagOptieKeuze";
             this.Text = "FormVraagMaker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormVraagOptieKeuze_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
@@ -180,5 +198,6 @@
         private System.Windows.Forms.Label lblQuiz;
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.PictureBox pboxBackground;
+        private System.Windows.Forms.Label lblSoon;
     }
 }

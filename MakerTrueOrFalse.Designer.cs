@@ -46,7 +46,6 @@
             this.lblDone = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnNotdone = new System.Windows.Forms.Button();
-            this.lblQuizname = new System.Windows.Forms.Label();
             this.lblSavingquiz = new System.Windows.Forms.Label();
             this.pboxSaving = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -93,7 +92,7 @@
             this.pboxLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pboxLogo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pboxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pboxLogo.Image")));
-            this.pboxLogo.Location = new System.Drawing.Point(1279, 0);
+            this.pboxLogo.Location = new System.Drawing.Point(1136, 1);
             this.pboxLogo.Name = "pboxLogo";
             this.pboxLogo.Size = new System.Drawing.Size(164, 140);
             this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,19 +282,6 @@
             this.btnNotdone.Visible = false;
             this.btnNotdone.Click += new System.EventHandler(this.btnNotdone_Click);
             // 
-            // lblQuizname
-            // 
-            this.lblQuizname.AutoSize = true;
-            this.lblQuizname.BackColor = System.Drawing.SystemColors.GrayText;
-            this.lblQuizname.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.8F, System.Drawing.FontStyle.Bold);
-            this.lblQuizname.ForeColor = System.Drawing.Color.White;
-            this.lblQuizname.Location = new System.Drawing.Point(645, 9);
-            this.lblQuizname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblQuizname.Name = "lblQuizname";
-            this.lblQuizname.Size = new System.Drawing.Size(140, 55);
-            this.lblQuizname.TabIndex = 22;
-            this.lblQuizname.Text = "Quiz:";
-            // 
             // lblSavingquiz
             // 
             this.lblSavingquiz.AutoSize = true;
@@ -333,7 +319,6 @@
             this.ClientSize = new System.Drawing.Size(1443, 839);
             this.Controls.Add(this.pboxSaving);
             this.Controls.Add(this.lblSavingquiz);
-            this.Controls.Add(this.lblQuizname);
             this.Controls.Add(this.lblDone);
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.lblQuestionnumber);
@@ -356,6 +341,7 @@
             this.Name = "MakerTrueOrFalse";
             this.Text = "x";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MakerTrueOrFalse_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
@@ -390,7 +376,6 @@
         private System.Windows.Forms.Label lblDone;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnNotdone;
-        private System.Windows.Forms.Label lblQuizname;
         private System.Windows.Forms.Label lblSavingquiz;
         private System.Windows.Forms.PictureBox pboxSaving;
     }

@@ -38,12 +38,13 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblThatis = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboxBackground = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblQuizName = new System.Windows.Forms.Label();
+            this.lblCorrect = new System.Windows.Forms.Label();
+            this.lblIncorrect = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,8 +68,8 @@
             this.btnTrue.AutoSize = true;
             this.btnTrue.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnTrue.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnTrue.Location = new System.Drawing.Point(254, 478);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTrue.Location = new System.Drawing.Point(252, 465);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(381, 236);
             this.btnTrue.TabIndex = 4;
@@ -83,8 +84,8 @@
             this.btnFalse.AutoSize = true;
             this.btnFalse.BackColor = System.Drawing.Color.Orange;
             this.btnFalse.Font = new System.Drawing.Font("Arial Rounded MT Bold", 23F);
-            this.btnFalse.Location = new System.Drawing.Point(712, 478);
-            this.btnFalse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFalse.Location = new System.Drawing.Point(789, 465);
+            this.btnFalse.Margin = new System.Windows.Forms.Padding(2);
             this.btnFalse.Name = "btnFalse";
             this.btnFalse.Size = new System.Drawing.Size(381, 236);
             this.btnFalse.TabIndex = 6;
@@ -97,7 +98,7 @@
             // 
             this.bar.BackColor = System.Drawing.Color.Gold;
             this.bar.Location = new System.Drawing.Point(-146, 0);
-            this.bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bar.Margin = new System.Windows.Forms.Padding(2);
             this.bar.Name = "bar";
             this.bar.Size = new System.Drawing.Size(2077, 112);
             this.bar.TabIndex = 7;
@@ -121,7 +122,7 @@
             this.prbTijd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.prbTijd.ForeColor = System.Drawing.Color.Purple;
             this.prbTijd.Location = new System.Drawing.Point(11, 550);
-            this.prbTijd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prbTijd.Margin = new System.Windows.Forms.Padding(2);
             this.prbTijd.Name = "prbTijd";
             this.prbTijd.Size = new System.Drawing.Size(1360, 50);
             this.prbTijd.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -160,7 +161,7 @@
             this.lblThatis.BackColor = System.Drawing.Color.Transparent;
             this.lblThatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThatis.ForeColor = System.Drawing.Color.White;
-            this.lblThatis.Location = new System.Drawing.Point(486, 272);
+            this.lblThatis.Location = new System.Drawing.Point(507, 272);
             this.lblThatis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThatis.Name = "lblThatis";
             this.lblThatis.Size = new System.Drawing.Size(407, 63);
@@ -169,36 +170,27 @@
             this.lblThatis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblThatis.Visible = false;
             // 
-            // pictureBox1
+            // pboxBackground
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1587, 895);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pboxBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pboxBackground.Image = ((System.Drawing.Image)(resources.GetObject("pboxBackground.Image")));
+            this.pboxBackground.Location = new System.Drawing.Point(0, 0);
+            this.pboxBackground.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxBackground.Name = "pboxBackground";
+            this.pboxBackground.Size = new System.Drawing.Size(1587, 895);
+            this.pboxBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxBackground.TabIndex = 13;
+            this.pboxBackground.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pictureBox2.Location = new System.Drawing.Point(-284, 106);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(2077, 24);
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.textBox1.Location = new System.Drawing.Point(488, 213);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 20);
-            this.textBox1.TabIndex = 16;
             // 
             // lblQuizName
             // 
@@ -213,6 +205,36 @@
             this.lblQuizName.TabIndex = 17;
             this.lblQuizName.Text = "Quiz:";
             // 
+            // lblCorrect
+            // 
+            this.lblCorrect.AutoSize = true;
+            this.lblCorrect.BackColor = System.Drawing.Color.Transparent;
+            this.lblCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorrect.ForeColor = System.Drawing.Color.Lime;
+            this.lblCorrect.Location = new System.Drawing.Point(598, 272);
+            this.lblCorrect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorrect.Name = "lblCorrect";
+            this.lblCorrect.Size = new System.Drawing.Size(227, 63);
+            this.lblCorrect.TabIndex = 18;
+            this.lblCorrect.Text = "Correct!";
+            this.lblCorrect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCorrect.Visible = false;
+            // 
+            // lblIncorrect
+            // 
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrect.Location = new System.Drawing.Point(563, 272);
+            this.lblIncorrect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(262, 63);
+            this.lblIncorrect.TabIndex = 19;
+            this.lblIncorrect.Text = "Incorrect!";
+            this.lblIncorrect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIncorrect.Visible = false;
+            // 
             // FormVraag1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,10 +243,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1443, 857);
-            this.Controls.Add(this.lblQuizName);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblThatis);
+            this.Controls.Add(this.lblIncorrect);
+            this.Controls.Add(this.lblCorrect);
+            this.Controls.Add(this.lblQuizName);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.prbTijd);
@@ -233,14 +256,15 @@
             this.Controls.Add(this.btnFalse);
             this.Controls.Add(this.btnTrue);
             this.Controls.Add(this.lblVraag);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.pboxBackground);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormVraag1";
             this.Text = "VraagTest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormVraag1_FormClosing);
             this.Load += new System.EventHandler(this.VraagTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -258,9 +282,10 @@
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblThatis;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxBackground;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblQuizName;
+        private System.Windows.Forms.Label lblCorrect;
+        private System.Windows.Forms.Label lblIncorrect;
     }
 }

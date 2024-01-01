@@ -29,7 +29,9 @@ namespace MakerDeelEVOQUIZ
 
         string AnswerUser;
         string answer;
+        string Quizname;
         int thatis;
+        int QuestionNumber = 1;
 
         public FormVraag1()
         {
@@ -38,18 +40,6 @@ namespace MakerDeelEVOQUIZ
 
         private async void VraagTest_Load(object sender, EventArgs e)
         {
-            string filePathQuizName = Path.Combine(Application.StartupPath + "\\database\\" + $"PlayedQuiz.txt");
-            if (File.Exists(filePathQuizName)) //Kijkt na of de file bestaat
-            {
-                //Leest alle lijnen van de file
-                List<string> QuizName = File.ReadAllLines(filePathQuizName).ToList();
-
-                //Schijft alle lijnen op
-                File.WriteAllLines(filePathQuizName, QuizName);
-
-                lblQuizName.Text = QuizName[0]; 
-
-            }
 
             //Maakt de button border onzichtbaar
             btnFalse.FlatStyle = FlatStyle.Flat;
@@ -59,13 +49,15 @@ namespace MakerDeelEVOQUIZ
             btnTrue.FlatAppearance.BorderSize = 8;
             btnTrue.FlatAppearance.BorderColor = SystemColors.ControlDarkDark;
 
-            textBox1.Text = "TEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEST";
-
             //Hier wacht hij 1 miliseconden en geeft daarna lblVraag de waarde van de variable in
-
             await Task.Delay(1);
             QuestionLoad();
 
+            QuestionBar();
+        }
+
+        private async void QuestionBar()
+        {
             while (true) //Start de loop van de timer en maakt de buttons zichtbaar
             {
                 await Task.Delay(40);
@@ -76,14 +68,12 @@ namespace MakerDeelEVOQUIZ
                     btnFalse.Visible = true;
                     btnTrue.Visible = true;
                     prbTijd.Visible = false;
-                    startcount(); //Start de functie
+                   // startcount(); //Start de functie
                     break;
                 }
             }
-
         }
-
-        private async void btnTrue_Click(object sender, EventArgs e)
+            private async void btnTrue_Click(object sender, EventArgs e)
         {
             AnswerUser = "true";
 
@@ -97,12 +87,15 @@ namespace MakerDeelEVOQUIZ
                 await Task.Delay(300);
                 lblThatis.Text = "That is...";
                 await Task.Delay(300);
-                thatis ++;
+                thatis++;
+
+                QuestionNumber++;
 
                 if (thatis == 2)
                 {
                     break;
                 }
+                lblThatis.Visible = false;
                 break;
             }
 
@@ -118,6 +111,7 @@ namespace MakerDeelEVOQUIZ
                 //Disabled de buttons
                 btnFalse.Enabled = false;
                 btnTrue.Enabled = false;
+                lblCorrect.Visible = true;
             }
             else
             {
@@ -131,44 +125,68 @@ namespace MakerDeelEVOQUIZ
 
                 //Stopts de Loop omdat hij true gaat
                 LoopStop = true;
-                
+
                 //Disabled the Buttons
                 btnFalse.Enabled = false;
                 btnTrue.Enabled = false;
+                lblIncorrect.Visible = true;
             }
         }
-        private void btnFalse_Click(object sender, EventArgs e)
+        private async void btnFalse_Click(object sender, EventArgs e)
         {
+            AnswerUser = "false";
+
+            lblVraag.Visible = false;
+            lblThatis.Visible = true;
+            while (true)
             {
-                AnswerUser = "false";
-                if (AnswerUser == answer)
+                lblThatis.Text = "That is.";
+                await Task.Delay(300);
+                lblThatis.Text = "That is..";
+                await Task.Delay(300);
+                lblThatis.Text = "That is...";
+                await Task.Delay(300);
+                thatis++;
+
+                QuestionNumber++;
+
+                if (thatis == 2)
                 {
-                    btnFalse.BackColor = Color.Goldenrod;
-                    lblScore.ForeColor = Color.Cyan;
-
-                    LoopStop = true;
-
-                    btnFalse.Enabled = false;
-                    btnTrue.Enabled = false;
-
+                    break;
                 }
-                else
-                {
-                    btnFalse.BackColor = Color.Goldenrod;
-                    lblScore.ForeColor = Color.Gray;
+                lblThatis.Visible = false;
+                break;
+            }
 
-                    totalScore = 0;
-                    lblScore.Text = "Score: +" + totalScore.ToString();
-                    lblScore.Visible = true;
+            if (AnswerUser == answer)
+            {
+                btnFalse.BackColor = Color.Goldenrod;
+                lblScore.ForeColor = Color.Cyan;
 
-                    LoopStop = true;
+                LoopStop = true;
 
-                    btnFalse.Enabled = false;
-                    btnTrue.Enabled = false;
+                btnFalse.Enabled = false;
+                btnTrue.Enabled = false;
+                QuestionNumber++;
+                lblCorrect.Visible = true;
+            }
+            else
+            {
+                btnFalse.BackColor = Color.Goldenrod;
+                lblScore.ForeColor = Color.Gray;
 
-                }
+                totalScore = 0;
+                lblScore.Text = "Score: +" + totalScore.ToString();
+                lblScore.Visible = true;
+
+                LoopStop = true;
+
+                btnFalse.Enabled = false;
+                btnTrue.Enabled = false;
+                lblIncorrect.Visible = true;
             }
         }
+
 
 
         private async void startcount()
@@ -434,6 +452,7 @@ namespace MakerDeelEVOQUIZ
                 formleaderboard.Show();
             }
         }
+
         private async void punten20()
         {
             timer3--;
@@ -481,10 +500,31 @@ namespace MakerDeelEVOQUIZ
                 formleaderboard.Show();
             }
         }
-        private void QuestionLoad()
+        private async void QuestionLoad()
         {
+
+            string filePathQuizName = Path.Combine(Application.StartupPath + "\\database\\" + $"PlayedQuiz.txt");
+            if (File.Exists(filePathQuizName)) //Kijkt na of de file bestaat
+            {
+                //Leest alle lijnen van de file
+                List<string> QuizName = File.ReadAllLines(filePathQuizName).ToList();
+
+                //Schijft alle lijnen op
+                File.WriteAllLines(filePathQuizName, QuizName);
+
+                lblQuizName.Text = QuizName[0];
+
+                Quizname = QuizName[0];
+
+            }
+            else
+            {
+
+            }
+
+            await Task.Delay(1);
             //Vind de Path naar de file
-            string filePathQuestion = Path.Combine(Application.StartupPath, "info", "Question1.txt");
+            string filePathQuestion = Path.Combine(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"Question{QuestionNumber}.txt");
 
             if (File.Exists(filePathQuestion)) //Kijkt na of de file bestaat
             {
@@ -494,14 +534,13 @@ namespace MakerDeelEVOQUIZ
                 //Schijft alle lijnen op
                 File.WriteAllLines(filePathQuestion, Question1);
 
-                //Laat label zien
-                if (Question1.Count > 0)
-                {
-                    lblVraag.Text = Question1[0];
-                }
-            }
 
-            string filePathTrueFalse = Path.Combine(Application.StartupPath, "info", "Question1TrueFalse.txt");
+                lblVraag.Text = Question1[0];
+
+            }
+          
+
+            string filePathTrueFalse = Path.Combine(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"Question{QuestionNumber}TrueFalse.txt");
 
             if (File.Exists(filePathTrueFalse)) //Kijkt na of de file bestaat
             {
@@ -511,14 +550,12 @@ namespace MakerDeelEVOQUIZ
                 // Schijft alle lijnen op
                 File.WriteAllLines(filePathTrueFalse, Answer1);
 
-                // Laat label zien
-                if (Answer1.Count > 0)
-                {
-                    answer = Answer1[0];
-                }
+                
+                answer = Answer1[0];
+
             }
 
-            string filePathTimer = Path.Combine(Application.StartupPath, "info", "timerSpeed.txt");
+            string filePathTimer = Path.Combine(Application.StartupPath + "\\database\\" + "\\dataquizquestions\\" + $"\\{Quizname}\\" + $"{Quizname}timerSpeed.txt");
 
             if (File.Exists(filePathTimer)) //Kijkt na of de file bestaat
             {
@@ -526,8 +563,14 @@ namespace MakerDeelEVOQUIZ
                 List<string> timerSpeed = File.ReadAllLines(filePathTimer).ToList();
 
                 // Schijft alle lijnen op
-                File.WriteAllLines(filePathTimer, timerSpeed); 
+                File.WriteAllLines(filePathTimer, timerSpeed);
             }
+        }
+
+        private void FormVraag1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
         }
     }
 }

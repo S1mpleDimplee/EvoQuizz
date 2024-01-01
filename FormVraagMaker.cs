@@ -37,5 +37,11 @@ namespace MakerDeelEVOQUIZ
             formhomepage.Show();
             this.Hide();
         }
+
+        private void FormVraagOptieKeuze_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
+        }
     }
 }

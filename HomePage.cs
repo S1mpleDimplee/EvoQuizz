@@ -77,5 +77,11 @@ namespace MakerDeelEVOQUIZ
                 Directory.CreateDirectory(dataquizespage);
             }
         }
+
+        private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
+        }
     }
 }

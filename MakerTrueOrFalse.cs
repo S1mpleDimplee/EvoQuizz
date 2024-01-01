@@ -107,6 +107,7 @@ namespace Makerdeel2
                 QuestionNumberfunction();
 
                 FormLoading();
+                tboxVraag.Text = null;
 
                 //Gaat naar de volgende form
                 this.Hide();
@@ -175,14 +176,14 @@ namespace Makerdeel2
 
         private async void btnDone_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Application.StartupPath + "\\database\\" + "\\savedquizespage\\" + $"Quiz{QuizNumber}.txt"))
+            if (File.Exists(Application.StartupPath + "\\database\\" + "\\datasavedquizes\\" + $"Quiz{QuizNumber}.txt"))
             {
                 QuizNumber++;
                 btnDone_Click(sender, e);
             }
             else
             {
-                StreamWriter pathQuizSave = new StreamWriter(Application.StartupPath + "\\database\\" + "\\savedquizespage\\" + $"Quiz{QuizNumber}.txt");
+                StreamWriter pathQuizSave = new StreamWriter(Application.StartupPath + "\\database\\" + "\\datasavedquizes\\" + $"Quiz{QuizNumber}.txt");
                 pathQuizSave.WriteLine(quizname);
                 pathQuizSave.Close();
                 lblSavingquiz.Visible = true;
@@ -194,6 +195,12 @@ namespace Makerdeel2
                 formhomepage.Show();
                 this.Hide();
             }
+        }
+
+        private void MakerTrueOrFalse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
         }
     }
 }

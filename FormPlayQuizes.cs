@@ -23,5 +23,11 @@ namespace MakerDeelEVOQUIZ
             playMadeQuizes.Show();
             this.Hide();
         }
+
+        private void FormPlayQuizes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
+        }
     }
 }

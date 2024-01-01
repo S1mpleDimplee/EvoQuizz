@@ -104,6 +104,7 @@ namespace MakerDeelEVOQUIZ
 
         private void fileSend()
         {
+            Quizname = Quizname.ToLower();
             string folderPathQuizname = Path.Combine(Application.StartupPath, "database", "dataquizquestions", Quizname);
             if (!Directory.Exists(folderPathQuizname))
             {

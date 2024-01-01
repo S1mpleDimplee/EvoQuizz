@@ -86,6 +86,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPlayQuizes";
             this.Text = "FormPlayQuizes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPlayQuizes_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();
             this.ResumeLayout(false);
 

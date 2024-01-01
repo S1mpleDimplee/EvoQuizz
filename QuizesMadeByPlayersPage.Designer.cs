@@ -393,6 +393,7 @@
             this.Name = "QuizesMadeByPlayersPage";
             this.Text = "PlayMadeQuizes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuizesMadeByPlayersPage_FormClosing);
             this.Load += new System.EventHandler(this.PlayMadeQuizes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();

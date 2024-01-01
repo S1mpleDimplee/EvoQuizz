@@ -123,7 +123,7 @@
             this.pboxCreategif.TabIndex = 5;
             this.pboxCreategif.TabStop = false;
             // 
-            // Formhomepage
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,9 +137,10 @@
             this.Controls.Add(this.pboxCreategif);
             this.Controls.Add(this.pboxBackground);
             this.DoubleBuffered = true;
-            this.Name = "Formhomepage";
+            this.Name = "HomePage";
             this.Text = "Formhomepage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomePage_FormClosing);
             this.Load += new System.EventHandler(this.Formhomepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBackground)).EndInit();

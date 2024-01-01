@@ -18,6 +18,7 @@ namespace MakerDeelEVOQUIZ
             InitializeComponent();
         }
 
+        int QuizClickNumber;
         int QuizNumber = 1;
         string[] QuizNameText = new string[16];
 
@@ -71,66 +72,82 @@ namespace MakerDeelEVOQUIZ
                 case 1:
                     btnQuiz1.Text = QuizNameText[QuizNumber];
                     btnQuiz1.Visible = true;
+                    QuizClickNumber = 1;
                     break;
                 case 2:
                     btnQuiz2.Text = QuizNameText[QuizNumber];
                     btnQuiz2.Visible = true;
+                    QuizClickNumber = 2;
                     break;
                 case 3:
                     btnQuiz3.Text = QuizNameText[QuizNumber];
                     btnQuiz3.Visible = true;
+                    QuizClickNumber = 3;
                     break;
                 case 4:
                     btnQuiz4.Text = QuizNameText[QuizNumber];
                     btnQuiz4.Visible = true;
+                    QuizClickNumber = 4;
                     break;
                 case 5:
                     btnQuiz5.Text = QuizNameText[QuizNumber];
                     btnQuiz5.Visible = true;
+                    QuizClickNumber = 5;
                     break;
                 case 6:
                     btnQuiz6.Text = QuizNameText[QuizNumber];
                     btnQuiz6.Visible = true;
+                    QuizClickNumber = 6;
                     break;
                 case 7:
                     btnQuiz7.Text = QuizNameText[QuizNumber];
                     btnQuiz7.Visible = true;
+                    QuizClickNumber = 7;
                     break;
                 case 8:
                     btnQuiz8.Text = QuizNameText[QuizNumber];
                     btnQuiz8.Visible = true;
+                    QuizClickNumber = 8;
                     break;
                 case 9:
                     btnQuiz9.Text = QuizNameText[QuizNumber];
                     btnQuiz9.Visible = true;
+                    QuizClickNumber = 9;
                     break;
                 case 10:
                     btnQuiz10.Text = QuizNameText[QuizNumber];
                     btnQuiz10.Visible = true;
+                    QuizClickNumber = 10;
                     break;
                 case 11:
                     btnQuiz11.Text = QuizNameText[QuizNumber];
                     btnQuiz11.Visible = true;
+                    QuizClickNumber = 11;
                     break;
                 case 12:
                     btnQuiz12.Text = QuizNameText[QuizNumber];
                     btnQuiz12.Visible = true;
+                    QuizClickNumber = 12;
                     break;
                 case 13:
                     btnQuiz13.Text = QuizNameText[QuizNumber];
                     btnQuiz13.Visible = true;
+                    QuizClickNumber = 13;
                     break;
                 case 14:
                     btnQuiz14.Text = QuizNameText[QuizNumber];
                     btnQuiz14.Visible = true;
+                    QuizClickNumber = 14;
                     break;
                 case 15:
                     btnQuiz15.Text = QuizNameText[QuizNumber];
                     btnQuiz15.Visible = true;
+                    QuizClickNumber = 15;
                     break;
                 case 16:
                     btnQuiz16.Text = QuizNameText[QuizNumber];
                     btnQuiz16.Visible = true;
+                    QuizClickNumber = 16;
                     break;
             }
 
@@ -147,10 +164,6 @@ namespace MakerDeelEVOQUIZ
         private void btnQuiz1_Click(object sender, EventArgs e)
         {
             LoadForm();
-
-            StreamWriter pathQuestionTrueFalse = new StreamWriter(Application.StartupPath + "\\database\\" + $"PlayedQuiz.txt");
-            pathQuestionTrueFalse.WriteLine(btnQuiz1.Text);
-            pathQuestionTrueFalse.Close();
         }
 
         private void btnQuiz2_Click(object sender, EventArgs e)
@@ -230,9 +243,19 @@ namespace MakerDeelEVOQUIZ
 
         private void LoadForm()
         {
+            StreamWriter pathQuestionTrueFalse = new StreamWriter(Application.StartupPath + "\\database\\" + $"PlayedQuiz.txt");
+            pathQuestionTrueFalse.WriteLine(QuizNameText[QuizClickNumber]);
+            pathQuestionTrueFalse.Close();
+
             FormVraag1 TrueOrFalseQuiz = new FormVraag1();
             this.Hide();
             TrueOrFalseQuiz.Show();
+        }
+
+        private void QuizesMadeByPlayersPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            this.Close();
         }
     }
 }
